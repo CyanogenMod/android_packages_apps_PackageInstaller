@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2007 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+     Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,7 +14,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name" msgid="2738748390251381682">"Installatieprogramma van pakket"</string>
@@ -22,7 +22,7 @@
     <string name="security_settings_desc" msgid="2706691034244052604">"Toestaan dat deze app:"</string>
     <string name="cancel" msgid="8360346460165114585">"Annuleren"</string>
     <string name="unknown" msgid="4742479012767208045">"Onbekend"</string>
-    <string name="installing" msgid="8613631001631998372">"Installeren..."</string>
+    <string name="installing" msgid="8613631001631998372">"Bezig met installeren\u2026"</string>
     <string name="install_done" msgid="3682715442154357097">"App geïnstalleerd."</string>
     <string name="install_confirm_question" msgid="7295206719219043890">"Wilt u deze app installeren? Deze krijgt toegang tot:"</string>
     <string name="install_confirm_question_no_perms" msgid="5918305641302873520">"Wilt u deze app installeren? Hiervoor is geen speciale toegang vereist."</string>
@@ -31,7 +31,7 @@
     <string name="install_failed" msgid="6579998651498970899">"App niet geïnstalleerd."</string>
     <string name="install_failed_invalid_apk" msgid="1287935707565682604">"Het pakket lijkt beschadigd."</string>
     <string name="install_failed_inconsistent_certificates" msgid="1517751954440692054">"Een bestaand pakket met dezelfde naam en een conflicterende handtekening is al geïnstalleerd."</string>
-    <string name="install_failed_older_sdk" msgid="7947925824732917665">"Het pakket werkt alleen met nieuwe versies van Android."</string>
+    <string name="install_failed_older_sdk" msgid="7947925824732917665">"Het pakket werkt alleen met nieuwere versies van Android."</string>
     <string name="install_failed_cpu_abi_incompatible" product="tablet" msgid="7098684468842750800">"Deze app is niet compatibel met uw tablet."</string>
     <string name="install_failed_cpu_abi_incompatible" product="default" msgid="4433316303249711331">"Deze app is niet compatibel met uw telefoon."</string>
     <string name="install_failed_file_not_found" msgid="1958430133396322619">"Het opgegeven pakket is verwijderd voordat de installatie was voltooid."</string>
@@ -50,7 +50,7 @@
     <string name="manage_applications" msgid="4033876279091996596">"Apps beheren"</string>
     <string name="dlg_app_replacement_title" msgid="1232230739563820951">"App vervangen?"</string>
     <string name="dlg_app_replacement_statement" msgid="2992911899989907492">"De app die u installeert, vervangt een andere app."\n\n"Al uw eerdere gebruikersgegevens worden opgeslagen."</string>
-    <string name="dlg_sys_app_replacement_statement" msgid="1900046590819605929">"Dit is een systeemapp."\n\n"Al uw eerdere gebruikersgegevens worden opgeslagen."</string>
+    <string name="dlg_sys_app_replacement_statement" msgid="1900046590819605929">"Dit is een systeem-app."\n\n"Al uw eerdere gebruikersgegevens worden opgeslagen."</string>
     <string name="out_of_space_dlg_title" msgid="7843674437613797326">"Geen ruimte beschikbaar"</string>
     <string name="out_of_space_dlg_text" msgid="4774775404294282216">"<xliff:g id="APP_NAME">%1$s</xliff:g> kan niet worden geïnstalleerd. Maak ruimte vrij en probeer het opnieuw."</string>
     <string name="dlg_ok" msgid="6944357727705699232">"OK"</string>
@@ -61,7 +61,7 @@
     <string name="uninstall_activity_text" msgid="6680688689803932550">"<xliff:g id="ACTIVITY_NAME">%1$s</xliff:g> maakt deel uit van de volgende app:"</string>
     <string name="uninstall_application_text" msgid="6691975835951187030">"Wilt u deze app verwijderen?"</string>
     <string name="uninstall_update_text" msgid="2056387942084605027">"Wilt u deze app vervangen door de fabrieksversie?"</string>
-    <string name="uninstalling" msgid="5556217435895938250">"Verwijderen..."</string>
+    <string name="uninstalling" msgid="5556217435895938250">"Verwijderen\u2026"</string>
     <string name="uninstall_done" msgid="3792487853420281888">"Verwijdering voltooid."</string>
     <string name="uninstall_failed" msgid="631122574306299512">"Verwijdering mislukt."</string>
     <string name="uninstall_failed_device_policy_manager" msgid="3493789239037852035">"Kan niet verwijderen omdat dit pakket een actieve apparaatbeheerder is."</string>
@@ -72,5 +72,5 @@
     <string name="newPerms" msgid="6039428254474104210">"Nieuw"</string>
     <string name="privacyPerms" msgid="1850527049572617">"Privacy"</string>
     <string name="devicePerms" msgid="6733560207731294504">"Apparaattoegang"</string>
-    <string name="no_new_perms" msgid="6657813692169565975">"Voor deze update zijn geen nieuwe rechten vereist."</string>
+    <string name="no_new_perms" msgid="6657813692169565975">"Voor deze update zijn geen nieuwe machtigingen vereist."</string>
 </resources>
