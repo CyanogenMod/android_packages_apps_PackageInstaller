@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -30,6 +31,7 @@ import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.UserManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +54,7 @@ public class UninstallerActivity extends Activity implements OnClickListener,
     private boolean localLOGV = false;
     PackageManager mPm;
     private ApplicationInfo mAppInfo;
+    private boolean mAllUsers;
     private Button mOk;
     private Button mCancel;
 
@@ -100,6 +103,7 @@ public class UninstallerActivity extends Activity implements OnClickListener,
         Intent newIntent = new Intent(Intent.ACTION_VIEW);
         newIntent.putExtra(PackageUtil.INTENT_ATTR_APPLICATION_INFO, 
                                                   mAppInfo);
+        newIntent.putExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, mAllUsers);
         if (getIntent().getBooleanExtra(Intent.EXTRA_RETURN_RESULT, false)) {
             newIntent.putExtra(Intent.EXTRA_RETURN_RESULT, true);
             newIntent.addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
@@ -132,6 +136,8 @@ public class UninstallerActivity extends Activity implements OnClickListener,
             errFlag = true;
         }
 
+        mAllUsers = intent.getBooleanExtra(Intent.EXTRA_UNINSTALL_ALL_USERS, false);
+
         // The class name may have been specified (e.g. when deleting an app from all apps)
         String className = packageURI.getFragment();
         ActivityInfo activityInfo = null;
@@ -157,7 +163,12 @@ public class UninstallerActivity extends Activity implements OnClickListener,
                 confirm.setText(R.string.uninstall_update_text);
             } else {
                 setTitle(R.string.uninstall_application_title);
-                confirm.setText(R.string.uninstall_application_text);
+                if (mAllUsers && ((UserManager)getSystemService(
+                        Context.USER_SERVICE)).getUsers().size() >= 2) {
+                    confirm.setText(R.string.uninstall_application_text_all_users);
+                } else {
+                    confirm.setText(R.string.uninstall_application_text);
+                }
             }
 
             // If an activity was specified (e.g. when dragging from All Apps to trash can),

@@ -28,6 +28,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
+import android.content.pm.VerificationParams;
 import android.graphics.drawable.LevelListDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -162,7 +163,7 @@ public class InstallAppProgress extends Activity implements View.OnClickListener
         mPackageURI = intent.getData();
 
         final String scheme = mPackageURI.getScheme();
-        if (scheme != null && !"file".equals(scheme)) {
+        if (scheme != null && !"file".equals(scheme) && !"package".equals(scheme)) {
             throw new IllegalArgumentException("unexpected scheme " + scheme);
         }
 
@@ -226,8 +227,14 @@ public class InstallAppProgress extends Activity implements View.OnClickListener
             Log.w(TAG, "Replacing package:" + mAppInfo.packageName);
         }
 
-        final File sourceFile = new File(mPackageURI.getPath());
-        PackageUtil.AppSnippet as = PackageUtil.getAppSnippet(this, mAppInfo, sourceFile);
+        final PackageUtil.AppSnippet as;
+        if ("package".equals(mPackageURI.getScheme())) {
+            as = new PackageUtil.AppSnippet(pm.getApplicationLabel(mAppInfo),
+                    pm.getApplicationIcon(mAppInfo));
+        } else {
+            final File sourceFile = new File(mPackageURI.getPath());
+            as = PackageUtil.getAppSnippet(this, mAppInfo, sourceFile);
+        }
         mLabel = as.label;
         PackageUtil.initSnippetForNewApp(this, as, R.id.app_snippet);
         mStatusTextView = (TextView)findViewById(R.id.center_text);
@@ -243,8 +250,27 @@ public class InstallAppProgress extends Activity implements View.OnClickListener
 
         String installerPackageName = getIntent().getStringExtra(
                 Intent.EXTRA_INSTALLER_PACKAGE_NAME);
+        Uri originatingURI = getIntent().getParcelableExtra(Intent.EXTRA_ORIGINATING_URI);
+        Uri referrer = getIntent().getParcelableExtra(Intent.EXTRA_REFERRER);
+        int originatingUid = getIntent().getIntExtra(Intent.EXTRA_ORIGINATING_UID,
+                VerificationParams.NO_UID);
+        VerificationParams verificationParams = new VerificationParams(null, originatingURI,
+                referrer, originatingUid, null);
         PackageInstallObserver observer = new PackageInstallObserver();
-        pm.installPackage(mPackageURI, observer, installFlags, installerPackageName);
+
+        if ("package".equals(mPackageURI.getScheme())) {
+            try {
+                pm.installExistingPackage(mAppInfo.packageName);
+                observer.packageInstalled(mAppInfo.packageName,
+                        PackageManager.INSTALL_SUCCEEDED);
+            } catch (PackageManager.NameNotFoundException e) {
+                observer.packageInstalled(mAppInfo.packageName,
+                        PackageManager.INSTALL_FAILED_INVALID_APK);
+            }
+        } else {
+            pm.installPackageWithVerificationAndEncryption(mPackageURI, observer, installFlags,
+                    installerPackageName, verificationParams, null);
+        }
     }
 
     @Override
