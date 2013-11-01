@@ -28,7 +28,7 @@
     <string name="install_confirm_question" msgid="7295206719219043890">"Nais mo bang i-install ang application na ito? Magkakaroon ito ng access sa:"</string>
     <string name="install_confirm_question_no_perms" msgid="5918305641302873520">"Nais mo bang i-install ang application na ito? Hindi ito nangangailangan ng anumang espesyal na access."</string>
     <string name="install_confirm_question_update" msgid="4624159567361487964">"Nais mo bang mag-install ng update sa umiiral nang application na ito? Hindi mawawala ang iyong umiiral nang data. Magkakaroon ng access ang na-update na application sa:"</string>
-    <string name="install_confirm_question_update_system" msgid="1302330093676416336">"Nais mo bang mag-install ng update sa built-in na application na ito? Hindi mawawala ang iyong umiiral nang data. Magkakaroon ng access ang na-update na application sa:"</string>
+    <string name="install_confirm_question_update_system" msgid="1302330093676416336">"Nais mo bang mag-install ng update sa built-in na application na ito? Hindi mawawala ang iyong umiiral na data. Magkakaroon ng access ang na-update na application sa:"</string>
     <string name="install_confirm_question_update_no_perms" msgid="4885928136844618944">"Nais mo bang mag-install ng update sa umiiral na application na ito? Hindi mawawala ang iyong umiiral na data. Hindi ito nangangailangan ng anumang espesyal na access."</string>
     <string name="install_confirm_question_update_system_no_perms" msgid="7676593512694724374">"Nais mo bang mag-install ng update sa built-in na application na ito? Hindi mawawala ang iyong umiiral na data. Hindi ito nangangailangan ng anumang espesyal na access."</string>
     <string name="install_failed" msgid="6579998651498970899">"Hindi na-install ang app."</string>
@@ -49,11 +49,11 @@
     <string name="ok" msgid="3468756155452870475">"OK"</string>
     <string name="settings" msgid="6743583734099755409">"Mga Setting"</string>
     <string name="allow_source_dlg_title" msgid="7568985073502399415">"Bagong pinagmumulan para sa apps"</string>
-    <string name="allow_source_dlg_text" msgid="3927580956764099076">"Gustong mag-install ng <xliff:g id="APP_NAME">%1$s</xliff:g> ng iba pang apps."\n\n"Payagan ito ngayon at sa hinaharap?"</string>
+    <string name="allow_source_dlg_text" msgid="3927580956764099076">"Gustong mag-install ng <xliff:g id="APP_NAME">%1$s</xliff:g> ng iba pang apps.\n\nPayagan ito ngayon at sa hinaharap?"</string>
     <string name="manage_applications" msgid="4033876279091996596">"Pamahalaan ang apps"</string>
     <string name="dlg_app_replacement_title" msgid="1232230739563820951">"Palitan ang app?"</string>
-    <string name="dlg_app_replacement_statement" msgid="2992911899989907492">"Papalitan ng app na iyong ini-install ang isa pang app."\n\n"Mase-save ang lahat ng iyong nakaraang data ng user."</string>
-    <string name="dlg_sys_app_replacement_statement" msgid="1900046590819605929">"Isa itong app ng system."\n\n"Mase-save ang lahat ng iyong nakaraang data ng user."</string>
+    <string name="dlg_app_replacement_statement" msgid="2992911899989907492">"Papalitan ng app na iyong ini-install ang isa pang app.\n\nMase-save ang lahat ng iyong nakaraang data ng user."</string>
+    <string name="dlg_sys_app_replacement_statement" msgid="1900046590819605929">"Isa itong app ng system.\n\nMase-save ang lahat ng iyong nakaraang data ng user."</string>
     <string name="out_of_space_dlg_title" msgid="7843674437613797326">"Wala ng espasyo"</string>
     <string name="out_of_space_dlg_text" msgid="4774775404294282216">"Hindi ma-install ang <xliff:g id="APP_NAME">%1$s</xliff:g>. Magbakante ng ilang espasyo at subukang muli."</string>
     <string name="dlg_ok" msgid="6944357727705699232">"OK"</string>
