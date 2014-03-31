@@ -298,7 +298,11 @@ public class InstallAppProgress extends Activity implements View.OnClickListener
             }
             finish();
         } else if(v == mLaunchButton) {
-            startActivity(mLaunchIntent);
+            mLaunchIntent = getPackageManager().getLaunchIntentForPackage(
+                    mAppInfo.packageName);
+            if (mLaunchIntent != null) {
+                startActivity(mLaunchIntent);
+            }
             finish();
         }
     }
