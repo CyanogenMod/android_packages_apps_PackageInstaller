@@ -15,13 +15,5 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="next">Weider</string>
-  <string name="done">Fäerdeg</string>
-  <string name="cancel">Ofbriechen</string>
-  <string name="launch">Opmaachen</string>
-  <string name="ok">OK</string>
-  <string name="settings">Astellungen</string>
-  <string name="dlg_ok">OK</string>
-  <string name="allPerms">All</string>
-  <string name="privacyPerms">Privatsphär</string>
+  <string name="launch">کردنه‌وه‌</string>
 </resources>
