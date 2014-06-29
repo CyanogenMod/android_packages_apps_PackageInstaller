@@ -15,5 +15,14 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="next">دواتر</string>
+  <string name="install">دامەزراندن</string>
+  <string name="done">ئه‌نجامدرا</string>
+  <string name="cancel">هەڵوەشاندنەوە</string>
+  <string name="unknown">نەناسراو</string>
   <string name="launch">کردنه‌وه‌</string>
+  <string name="ok">باشه‌</string>
+  <string name="settings">ڕێکخستنه‌کان</string>
+  <string name="dlg_ok">باشه‌</string>
+  <string name="allPerms">هەموو</string>
 </resources>
