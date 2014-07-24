@@ -16,7 +16,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="next">Weider</string>
+  <string name="install">Installéieren</string>
   <string name="done">Fäerdeg</string>
+  <string name="security_settings_desc">Dëser App erlaben:</string>
   <string name="cancel">Ofbriechen</string>
   <string name="launch">Opmaachen</string>
   <string name="ok">OK</string>
