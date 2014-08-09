@@ -59,8 +59,8 @@
   <string name="install_failed_msg" product="default"><xliff:g id="app_name">%1$s</xliff:g> ناتوانێت لە تەلەفۆنەکەتدا دابمەزرێت.</string>
   <string name="launch">کردنه‌وه‌</string>
   <string name="unknown_apps_dlg_title">دامەزراندن ڕاگیراوە</string>
-  <string name="unknown_apps_dlg_text" product="tablet">بۆ ئاسایش، تابلێتەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
-  <string name="unknown_apps_dlg_text" product="default">بۆ ئاسایش، تەلەفۆنەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
+  <string name="unknown_apps_dlg_text" product="tablet">بۆ ئاساییش، تابلێتەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
+  <string name="unknown_apps_dlg_text" product="default">بۆ ئاساییش، تەلەفۆنەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
   <string name="ok">باشه‌</string>
   <string name="settings">ڕێکخستنه‌کان</string>
   <string name="allow_source_dlg_title">سەرچاوەی نوێ بۆ بەرنامەکان</string>

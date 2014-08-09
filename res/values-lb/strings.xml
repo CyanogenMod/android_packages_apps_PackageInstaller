@@ -20,6 +20,11 @@
   <string name="done">Fäerdeg</string>
   <string name="security_settings_desc">Dëser App erlaben:</string>
   <string name="cancel">Ofbriechen</string>
+  <string name="unknown">Onbekannt</string>
+  <string name="install_done">App installéiert.</string>
+  <string name="install_confirm_question_no_perms">Wëlls du dës App installéieren?
+            Se brauch keng speziell Zougrëffsrechter.</string>
+  <string name="install_failed_invalid_apk">De Pak schéngt korrupt ze sinn.</string>
   <string name="launch">Opmaachen</string>
   <string name="ok">OK</string>
   <string name="settings">Astellungen</string>
