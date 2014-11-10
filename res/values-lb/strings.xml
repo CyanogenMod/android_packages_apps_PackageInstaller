@@ -69,8 +69,8 @@
   <string name="uninstalling">Gëtt desinstalléiert\u2026</string>
   <string name="uninstall_done">Desinstallatioun ofgeschloss.</string>
   <string name="uninstall_failed">Desinstallatioun net erfollegräich.</string>
-  <string name="uninstall_failed_device_policy_manager">Desinstallatioun net méiglech well dëse Pak en aktiven Administrator vum Apparat ass.</string>
-  <string name="manage_device_administrators">Administratore vum Apparat geréieren</string>
+  <string name="uninstall_failed_device_policy_manager">Desinstallatioun net méiglech well dëse Pak en aktiven Administrateur vum Apparat ass.</string>
+  <string name="manage_device_administrators">Administrateure vum Apparat geréieren</string>
   <string name="uninstall_failed_msg"><xliff:g id="app_name">%1$s</xliff:g> konnt net desinstalléiert ginn.</string>
   <string name="Parse_error_dlg_title">Liesfeeler</string>
   <string name="Parse_error_dlg_text">Et gouf e Problem beim Liese vum Pak.</string>
