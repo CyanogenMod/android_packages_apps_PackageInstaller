@@ -16,12 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">دابه‌زێنه‌ری به‌رنامه‌</string>
-  <string name="next">دواتر</string>
-  <string name="install">دامەزراندن</string>
-  <string name="done">ئه‌نجام درا</string>
   <string name="security_settings_desc">ڕێگه‌دان به‌ به‌رنامه‌ بۆ:</string>
-  <string name="cancel">هەڵوەشاندنەوە</string>
-  <string name="unknown">نەناسراو</string>
   <string name="installing">دادەمەزرێت\u2026</string>
   <string name="install_done">بەرنامەکە دامەزرێنرا.</string>
   <string name="install_confirm_question">ئەتەوێت ئەم بەرنامەیە دامەزرێنیت?</string>
@@ -57,12 +52,9 @@
         پاکێجە. دووبارە هەوڵ بدەوە بۆ دامەزراندنی دووباەری.</string>
   <string name="install_failed_msg" product="tablet"><xliff:g id="app_name">%1$s</xliff:g> ناتوانێت لە تابلێتەکەتدا دابمەزرێت.</string>
   <string name="install_failed_msg" product="default"><xliff:g id="app_name">%1$s</xliff:g> ناتوانێت لە تەلەفۆنەکەتدا دابمەزرێت.</string>
-  <string name="launch">کردنه‌وه‌</string>
   <string name="unknown_apps_dlg_title">دامەزراندن ڕاگیراوە</string>
   <string name="unknown_apps_dlg_text" product="tablet">بۆ ئاساییش، تابلێتەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
   <string name="unknown_apps_dlg_text" product="default">بۆ ئاساییش، تەلەفۆنەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
-  <string name="ok">باشه‌</string>
-  <string name="settings">ڕێکخستنه‌کان</string>
   <string name="allow_source_dlg_title">سەرچاوەی نوێ بۆ بەرنامەکان</string>
   <string name="allow_source_dlg_text"><xliff:g id="app_name">%1$s</xliff:g> دەیەوێ بەرنامەکانی تر دامەزرێنێت.\n\nڕێگە ئەدەیت بە
         لە ئێستا و لە داهاتوودا؟</string>
@@ -72,7 +64,6 @@
   <string name="dlg_sys_app_replacement_statement">ئەمە بەرنامەیەکی سیستەمییە.\n\nهەموو دراوە بەکار هاتووەکانی پێشووترت پاشەکەوت دەکرێت.</string>
   <string name="out_of_space_dlg_title">دەرچوون لە بۆشایی</string>
   <string name="out_of_space_dlg_text"><xliff:g id="app_name">%1$s</xliff:g> ناتوانێت دامەزرێنرێت. هەندێک بۆشایی بەتاڵ بکە و دووبارە هەوڵبدەوە.</string>
-  <string name="dlg_ok">باشه‌</string>
   <string name="app_not_found_dlg_title">بەرنامەکەی نەدۆزیەوە</string>
   <string name="app_not_found_dlg_text"> بەرنامەکە نەدۆزرایەوە لە لیستی بەرنامە دامەزراوەکان.</string>
   <string name="uninstall_application_title">سڕینه‌وه‌ بەرنامەکە</string>
@@ -92,8 +83,6 @@
   <string name="Parse_error_dlg_title">هەڵەی شی کردنەوە</string>
   <string name="Parse_error_dlg_text">هەڵەیەک هەبوو لا کاتی شی کردنەوەی ئەم پاکێجە.</string>
   <string name="newPerms">نوێ</string>
-  <string name="allPerms">گشت</string>
-  <string name="privacyPerms">تایبەتی</string>
   <string name="devicePerms">چوونەناو ئامێر</string>
   <string name="no_new_perms">ئەم نوێکارییە پێویستی بە هیچ ڕێگەپێدانێکی نوێ نییە.</string>
   <string name="grant_confirm_question">دەتەوێ ڕێگەپێدانەکانی بەردەم بە دەست بهێنی؟
