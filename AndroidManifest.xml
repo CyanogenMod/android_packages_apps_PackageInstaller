@@ -14,6 +14,8 @@
     <uses-permission android:name="android.permission.GRANT_REVOKE_PERMISSIONS" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.READ_INSTALL_SESSIONS" />
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
 
     <application android:label="@string/app_name"
             android:allowBackup="false"
@@ -71,6 +73,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- Generic hook for managing packages pre boot -->
+        <receiver android:name="PackageInstallerPreBootListener">
+            <intent-filter>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
 
     </application>
 </manifest> 
