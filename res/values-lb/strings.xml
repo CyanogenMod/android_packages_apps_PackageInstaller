@@ -37,16 +37,20 @@
   <string name="install_failed_inconsistent_certificates">En existéierende Pak mam selwechten Numm awer enger anerer Signatur ass schonn installéiert.</string>
   <string name="install_failed_older_sdk">De Pak funktionéiert just mat méi neie Versioune vun Android.</string>
   <string name="install_failed_cpu_abi_incompatible" product="tablet">D\'App ass net kompatibel mat dësem Tablet.</string>
+  <string name="install_failed_cpu_abi_incompatible" product="tv">Dës App ass net kompatibel mat denger Tëlee.</string>
   <string name="install_failed_cpu_abi_incompatible" product="default">D\'App ass net kompatibel mat dësem Telefon.</string>
   <string name="install_failed_file_not_found">De Pak gouf geläscht ier d\'Installatioun ofgeschloss konnt ginn.</string>
   <string name="install_failed_verify_failed">De Pak huet d\'Iwwerpréiwung net bestanen a kann net installéiert ginn.</string>
   <string name="install_failed_verify_timeout">Beim Iwwerpréiwe vum Pak ass d\'Zäit ofgelaf. Probéier méi spéit nees en z\'installéieren.</string>
   <string name="install_failed_msg" product="tablet"><xliff:g id="app_name">%1$s</xliff:g> konnt net op dësem Tablet installéiert ginn.</string>
+  <string name="install_failed_msg" product="tv"><xliff:g id="app_name">%1$s</xliff:g> konnt net op dëser Tëlee installéiert ginn.</string>
   <string name="install_failed_msg" product="default"><xliff:g id="app_name">%1$s</xliff:g> konnt net op dësem Telefon installéiert ginn.</string>
   <string name="launch">Opmaachen</string>
   <string name="unknown_apps_dlg_title">Installatioun blockéiert</string>
   <string name="unknown_apps_dlg_text" product="tablet">Aus Sécherheetsgrënn kënnen op dësem Tablet keng Appen aus onbekannte Quellen installéiert ginn.</string>
+  <string name="unknown_apps_dlg_text" product="tv">Aus Sécherheetsgrënn kënnen op dëser Tëlee keng Appen aus onbekannte Quellen installéiert ginn.</string>
   <string name="unknown_apps_dlg_text" product="default">Aus Sécherheetsgrënn kënnen op dësem Telefon keng Appen aus onbekannte Quellen installéiert ginn.</string>
+  <string name="unknown_apps_admin_dlg_text">Däin Administrateur erlaabt net d\'Installatioun vun Appen déi aus onbekannte Quelle kommen.</string>
   <string name="ok">OK</string>
   <string name="settings">Astellungen</string>
   <string name="allow_source_dlg_title">Nei Source fir Appen</string>
