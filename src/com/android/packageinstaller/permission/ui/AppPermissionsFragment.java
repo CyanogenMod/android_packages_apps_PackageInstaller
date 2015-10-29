@@ -20,6 +20,7 @@ import android.annotation.Nullable;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.AppOpsManager;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -28,15 +29,17 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PermissionInfo;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v14.preference.SwitchPreference;
+import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v7.preference.Preference.OnPreferenceClickListener;
-import android.support.v7.preference.PreferenceScreen;
+import android.support.v7.preference.PreferenceCategory;
+import android.support.v7.preference.PreferenceGroup;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,6 +53,7 @@ import android.widget.Toast;
 import com.android.packageinstaller.R;
 import com.android.packageinstaller.permission.model.AppPermissionGroup;
 import com.android.packageinstaller.permission.model.AppPermissions;
+import com.android.packageinstaller.permission.model.Permission;
 import com.android.packageinstaller.permission.utils.LocationUtils;
 import com.android.packageinstaller.permission.utils.SafetyNetLogger;
 import com.android.packageinstaller.permission.utils.Utils;
@@ -65,12 +69,15 @@ public final class AppPermissionsFragment extends SettingsWithHeader
     static final String EXTRA_HIDE_INFO_BUTTON = "hideInfoButton";
 
     private static final int MENU_ALL_PERMS = 0;
+    public static final String RUNTIME_PERMS_CAT = "runtime_perms";
+    public static final String ADDITIONAL_CAT = "additional_cat";
 
     private List<AppPermissionGroup> mToggledGroups;
     private AppPermissions mAppPermissions;
-    private PreferenceScreen mExtraScreen;
 
     private boolean mHasConfirmedRevoke;
+
+    private AppOpsManager mAppOps;
 
     public static AppPermissionsFragment newInstance(String packageName) {
         return setPackageName(new AppPermissionsFragment(), packageName);
@@ -102,6 +109,7 @@ public final class AppPermissionsFragment extends SettingsWithHeader
             return;
         }
 
+        mAppOps = (AppOpsManager) getActivity().getSystemService(Context.APP_OPS_SERVICE);
         mAppPermissions = new AppPermissions(activity, packageInfo, null, true, new Runnable() {
             @Override
             public void run() {
@@ -187,29 +195,135 @@ public final class AppPermissionsFragment extends SettingsWithHeader
         }
     }
 
+    private void addPermissionOp(PreferenceGroup parent, final Permission permission) {
+        if (!permission.hasAppOp()) {
+            Log.w(LOG_TAG, "no app opp for permission: " + permission);
+            return;
+        }
+        final int uid = mAppPermissions.getPackageInfo().applicationInfo.uid;
+        final String packageName = mAppPermissions.getPackageInfo().packageName;
+
+        // strict op's get an on/off switch, others can do always-ask
+        if (AppOpsManager.isStrictOp(permission.getAppOp())) {
+            SwitchPreference switchPref = new SwitchPreference(getPreferenceManager().getContext());
+            switchPref.setLayoutResource(R.layout.preference_permissions_switch_alt);
+            switchPref.setChecked(permission.isAppOpAllowed());
+            switchPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    mAppOps.setMode(permission.getAppOp(),
+                            uid,
+                            packageName,
+                            newValue == Boolean.TRUE
+                                    ? AppOpsManager.MODE_ALLOWED
+                                    : AppOpsManager.MODE_IGNORED);
+                    return true;
+                }
+            });
+            switchPref.setPersistent(false);
+            switchPref.setKey(permission.getName());
+            switchPref.setTitle(getPermissionLabel(permission));
+
+            parent.addPreference(switchPref);
+        } else {
+            final List<AppOpsManager.PackageOps> opsForPackage = mAppOps.getOpsForPackage(
+                    uid, packageName, new int[]{permission.getAppOp()});
+
+            int selectedMode = AppOpsManager.opToDefaultMode(permission.getAppOp(),
+                    AppOpsManager.isStrictEnable());
+
+            if (opsForPackage != null) {
+                final List<AppOpsManager.OpEntry> ops = opsForPackage.get(0).getOps();
+                for (AppOpsManager.OpEntry op : ops) {
+                    if (op.getOp() == permission.getAppOp()) {
+                        selectedMode = op.getMode();
+                        break;
+                    }
+                }
+            }
+            ListPreference listPref = new ListPreference(getPreferenceManager().getContext());
+            listPref.setLayoutResource(R.layout.preference_permissions_alt);
+            listPref.setKey(permission.getName());
+            listPref.setEntries(R.array.app_ops_permissions);
+            listPref.setEntryValues(R.array.app_ops_permissions_values);
+            listPref.setDefaultValue(String.valueOf(selectedMode));
+            listPref.setPersistent(false);
+            listPref.setSummary(getOpSummary(selectedMode));
+
+            listPref.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    Integer newAppOpMode = Integer.parseInt((String) newValue);
+                    // on = always ask, off = off
+                    mAppOps.setMode(permission.getAppOp(),
+                            uid,
+                            packageName,
+                            newAppOpMode);
+
+                    preference.setSummary(getOpSummary(newAppOpMode));
+                    return true;
+                }
+            });
+
+            listPref.setTitle(getPermissionLabel(permission));
+
+            parent.addPreference(listPref);
+        }
+    }
+
+    private CharSequence getOpSummary(int appOpMode) {
+        switch (appOpMode) {
+            case AppOpsManager.MODE_ALLOWED:
+                return getString(R.string.app_ops_permissions_allowed);
+            case AppOpsManager.MODE_ASK:
+                return getString(R.string.app_ops_permissions_always_ask);
+            default:
+                return getString(R.string.app_ops_permissions_ignored);
+        }
+    }
+
+    private CharSequence getPermissionLabel(Permission permission) {
+        final PermissionInfo permissionInfo;
+        try {
+            permissionInfo = getActivity().getPackageManager()
+                    .getPermissionInfo(permission.getName(), 0);
+            if (permissionInfo != null) {
+                String label = permissionInfo.loadLabel(
+                        getActivity().getPackageManager()).toString();
+
+                // permissions aren't capitalized, make it prettier
+                StringBuilder sb = new StringBuilder(label);
+                sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
+                return sb.toString();
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     private void loadPreferences() {
         Context context = getPreferenceManager().getContext();
         if (context == null) {
             return;
         }
 
-        PreferenceScreen screen = getPreferenceScreen();
-        screen.removeAll();
+        setPreferencesFromResource(R.xml.app_permissions, null);
 
-        if (mExtraScreen != null) {
-            mExtraScreen.removeAll();
-        }
-
-        final Preference extraPerms = new Preference(context);
-        extraPerms.setIcon(R.drawable.ic_toc);
-        extraPerms.setTitle(R.string.additional_permissions);
+        PreferenceCategory runtimeCat = (PreferenceCategory) findPreference(RUNTIME_PERMS_CAT);
+        PreferenceCategory additionalCat = (PreferenceCategory) findPreference(ADDITIONAL_CAT);
 
         for (AppPermissionGroup group : mAppPermissions.getPermissionGroups()) {
             if (!Utils.shouldShowPermission(group, mAppPermissions.getPackageInfo().packageName)) {
+                // maybe show groups we wouldn't show down below int he additional category
+                for (Permission p : group.getPermissions()) {
+                    if (p.isSystemFixed()) {
+                        continue;
+                    }
+                    addPermissionOp(additionalCat, p);
+                }
                 continue;
             }
-
-            boolean isPlatform = group.getDeclaringPackage().equals(Utils.OS_PKG);
 
             SwitchPreference preference = new SwitchPreference(context);
             preference.setOnPreferenceChangeListener(this);
@@ -224,36 +338,10 @@ public final class AppPermissionsFragment extends SettingsWithHeader
             }
             preference.setPersistent(false);
             preference.setEnabled(!group.isPolicyFixed());
-            preference.setChecked(group.areRuntimePermissionsGranted());
+            preference.setChecked(!group.isUserSet()
+                    ? group.hasGrantedByDefaultPermission() : group.areRuntimePermissionsGranted());
 
-            if (isPlatform) {
-                screen.addPreference(preference);
-            } else {
-                if (mExtraScreen == null) {
-                    mExtraScreen = getPreferenceManager().createPreferenceScreen(context);
-                }
-                mExtraScreen.addPreference(preference);
-            }
-        }
-
-        if (mExtraScreen != null) {
-            extraPerms.setOnPreferenceClickListener(new OnPreferenceClickListener() {
-                @Override
-                public boolean onPreferenceClick(Preference preference) {
-                    AdditionalPermissionsFragment frag = new AdditionalPermissionsFragment();
-                    setPackageName(frag, getArguments().getString(Intent.EXTRA_PACKAGE_NAME));
-                    frag.setTargetFragment(AppPermissionsFragment.this, 0);
-                    getFragmentManager().beginTransaction()
-                            .replace(android.R.id.content, frag)
-                            .addToBackStack(null)
-                            .commit();
-                    return true;
-                }
-            });
-            int count = mExtraScreen.getPreferenceCount();
-            extraPerms.setSummary(getResources().getQuantityString(
-                    R.plurals.additional_permissions_more, count, count));
-            screen.addPreference(extraPerms);
+            runtimeCat.addPreference(preference);
         }
 
         setLoading(false /* loading */, true /* animate */);
@@ -306,7 +394,6 @@ public final class AppPermissionsFragment extends SettingsWithHeader
                 group.revokeRuntimePermissions(false);
             }
         }
-
         return true;
     }
 
@@ -337,13 +424,10 @@ public final class AppPermissionsFragment extends SettingsWithHeader
     }
 
     private void setPreferencesCheckedState() {
-        setPreferencesCheckedState(getPreferenceScreen());
-        if (mExtraScreen != null) {
-            setPreferencesCheckedState(mExtraScreen);
-        }
+        setPreferencesCheckedState((PreferenceGroup) findPreference(RUNTIME_PERMS_CAT));
     }
 
-    private void setPreferencesCheckedState(PreferenceScreen screen) {
+    private void setPreferencesCheckedState(PreferenceGroup screen) {
         int preferenceCount = screen.getPreferenceCount();
         for (int i = 0; i < preferenceCount; i++) {
             Preference preference = screen.getPreference(i);
@@ -364,40 +448,6 @@ public final class AppPermissionsFragment extends SettingsWithHeader
         } catch (PackageManager.NameNotFoundException e) {
             Log.i(LOG_TAG, "No package:" + activity.getCallingPackage(), e);
             return null;
-        }
-    }
-
-    public static class AdditionalPermissionsFragment extends SettingsWithHeader {
-        AppPermissionsFragment mOuterFragment;
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            mOuterFragment = (AppPermissionsFragment) getTargetFragment();
-            super.onCreate(savedInstanceState);
-            setHeader(mOuterFragment.mIcon, mOuterFragment.mLabel, mOuterFragment.mInfoIntent);
-            setHasOptionsMenu(true);
-        }
-
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferenceScreen(mOuterFragment.mExtraScreen);
-        }
-
-        @Override
-        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-            super.onViewCreated(view, savedInstanceState);
-            String packageName = getArguments().getString(Intent.EXTRA_PACKAGE_NAME);
-            bindUi(this, getPackageInfo(getActivity(), packageName));
-        }
-
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            switch (item.getItemId()) {
-            case android.R.id.home:
-                getFragmentManager().popBackStack();
-                return true;
-            }
-            return super.onOptionsItemSelected(item);
         }
     }
 }

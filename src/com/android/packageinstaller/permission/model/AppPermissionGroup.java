@@ -65,8 +65,7 @@ public final class AppPermissionGroup implements Comparable<AppPermissionGroup> 
             return null;
         }
 
-        if (permissionInfo.protectionLevel != PermissionInfo.PROTECTION_DANGEROUS
-                || (permissionInfo.flags & PermissionInfo.FLAG_INSTALLED) == 0
+        if ((permissionInfo.flags & PermissionInfo.FLAG_INSTALLED) == 0
                 || (permissionInfo.flags & PermissionInfo.FLAG_HIDDEN) != 0) {
             return null;
         }
@@ -130,11 +129,6 @@ public final class AppPermissionGroup implements Comparable<AppPermissionGroup> 
                 continue;
             }
 
-            // Collect only runtime permissions.
-            if (requestedPermissionInfo.protectionLevel != PermissionInfo.PROTECTION_DANGEROUS) {
-                continue;
-            }
-
             // Don't allow toggle of non platform defined permissions for legacy apps via app ops.
             if (packageInfo.applicationInfo.targetSdkVersion <= Build.VERSION_CODES.LOLLIPOP_MR1
                     && !PLATFORM_PACKAGE_NAME.equals(requestedPermissionInfo.packageName)) {
@@ -144,9 +138,7 @@ public final class AppPermissionGroup implements Comparable<AppPermissionGroup> 
             final boolean granted = (packageInfo.requestedPermissionsFlags[i]
                     & PackageInfo.REQUESTED_PERMISSION_GRANTED) != 0;
 
-            final int appOp = PLATFORM_PACKAGE_NAME.equals(requestedPermissionInfo.packageName)
-                    ? AppOpsManager.permissionToOpCode(requestedPermissionInfo.name)
-                    : AppOpsManager.OP_NONE;
+            final int appOp = AppOpsManager.permissionToOpCode(requestedPermissionInfo.name);
 
             final boolean appOpAllowed = appOp != AppOpsManager.OP_NONE
                     && context.getSystemService(AppOpsManager.class).checkOp(appOp,
@@ -262,6 +254,26 @@ public final class AppPermissionGroup implements Comparable<AppPermissionGroup> 
 
     public boolean hasPermission(String permission) {
         return mPermissions.get(permission) != null;
+    }
+
+    public boolean areAllRuntimePermissionsGranted() {
+        if (LocationUtils.isLocationGroupAndProvider(mName, mPackageInfo.packageName)) {
+            return LocationUtils.isLocationEnabled(mContext);
+        }
+        final int permissionCount = mPermissions.size();
+        for (int i = 0; i < permissionCount; i++) {
+            Permission permission = mPermissions.valueAt(i);
+            if (mAppSupportsRuntimePermissions) {
+                if (!permission.isGranted()) {
+                    return false;
+                }
+            } else if (permission.isGranted() && ((permission.getAppOp()
+                    != AppOpsManager.OP_NONE && permission.isAppOpAllowed())
+                    || permission.getAppOp() == AppOpsManager.OP_NONE)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean areRuntimePermissionsGranted() {
