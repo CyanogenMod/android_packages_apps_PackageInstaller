@@ -274,4 +274,23 @@
          before permissions can be changed. [CHAR LIMIT=NONE] -->
     <string name="screen_overlay_button">Open settings</string>
 
+    <string name="runtime_permissions">Runtime permissions</string>
+    <!-- App ops permissions -->
+    <string-array name="app_ops_permissions" translatable="false">
+        <item>@string/app_ops_permissions_allowed</item>
+        <item>@string/app_ops_permissions_ignored</item>
+        <item>@string/app_ops_permissions_always_ask</item>
+    </string-array>
+
+    <string-array name="app_ops_permissions_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>4</item>
+    </string-array>
+
+    <!-- App ops permissions -->
+    <string name="app_ops_permissions_allowed">Allowed</string>
+    <string name="app_ops_permissions_ignored">Ignored</string>
+    <string name="app_ops_permissions_always_ask">Always ask</string>
+
 </resources>
