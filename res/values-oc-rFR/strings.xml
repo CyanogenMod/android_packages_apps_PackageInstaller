@@ -15,125 +15,59 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Instalador de paquetes</string>
-  <string name="next">Siguiente</string>
-  <string name="install">Instalar</string>
-  <string name="done">Fecho</string>
   <!-- TODO REMOVE LATER -->
-  <string name="security_settings_desc">Permitir qu\'esta aplicación:</string>
-  <string name="cancel">Encaboxar</string>
-  <string name="unknown">Desconocida</string>
-  <string name="installing">Instalando…</string>
-  <string name="install_done">Aplicación instalada</string>
   <!-- Message for installing a new app that requires some permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question">¿Quies instalar esta aplicación? Va poder acceder a:</string>
   <!-- Message for installing a new app that does not require permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_no_perms">¿Quies instalar esta aplicación? Nun necesita accesos especiales.</string>
   <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update">¿Quies instalar un anovamientu de l\'aplicación? Los tos datos nun van perdese. L\'aplicación anovada va poder acceder a:</string>
   <!-- Message for updating an existing system app [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update_system">¿Quies instalar un anovamientu d\'esta aplicación integrada? Los tos datos nun van perdese. L\'aplicación anovada va poder acceder a:</string>
   <!-- Message for updating an existing app, no permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update_no_perms">¿Quies instalar un anovamientu d\'esta aplicación? Los tos datos nun van perdese. Nun necesita accesos especiales.</string>
   <!-- Message for updating an existing system app, no permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update_system_no_perms">¿Quies instalar un anovamientu d\'esta aplicación integrada? Los tos datos nun van perdese. Nun necesita accesos especiales.</string>
-  <string name="install_failed">Aplicación non instalada</string>
   <!-- Reason displayed when installation fails because the installation package itself is invalid
         in some way (e.g., corrupt) [CHAR LIMIT=100] -->
-  <string name="install_failed_invalid_apk">Paez que\'l paquete ta dañáu.</string>
   <!-- Reason displayed when installation fails because the package an existing package is
         installed with a conflicting package author signature [CHAR LIMIT=100] -->
-  <string name="install_failed_inconsistent_certificates">Yá s\'instaló un paquete col mesmu nome con una robla en conflictu.</string>
   <!-- Reason displayed when installation fails because the package specifies a minimum compatible
         OS version that is newer than our current OS version. [CHAR LIMIT=100] -->
-  <string name="install_failed_older_sdk">Esti paquete namái funciona nes versiones más recientes d\'Android.</string>
   <!-- Reason displayed when installation fails because the package specifies it is compatible
         only with a CPU that the current tablet doesn't have. [CHAR LIMIT=100] -->
-  <string name="install_failed_cpu_abi_incompatible" product="tablet">Esta aplicación nun ye compatible cola tablet.</string>
   <!-- Reason displayed when installation fails because the package specifies it is compatible
         only with a CPU that the current TV doesn't have. [CHAR LIMIT=100] -->
   <!-- Reason displayed when installation fails because the package specifies it is compatible
         only with a CPU that the current phone doesn't have. [CHAR LIMIT=100] -->
-  <string name="install_failed_cpu_abi_incompatible" product="default">Esta aplicación nun ye compatible col teléfonu.</string>
   <!-- Reason displayed when installation fails because the package was deleted during the
         installation process. [CHAR LIMIT=100] -->
-  <string name="install_failed_file_not_found">El paquete especificáu desanicióse enantes de que se completara la instalación.</string>
   <!-- Reason displayed when installation fails because the package could not be verified
         because the package verifier rejected it. [CHAR LIMIT=100] -->
-  <string name="install_failed_verify_failed">El paquete nun superó\'l procesu de verificación y nun pue instalase.</string>
   <!-- Reason displayed when installation fails because the package could not be verified
         before the internal system timer expired. [CHAR LIMIT=100] -->
-  <string name="install_failed_verify_timeout">Escosó\'l tiempu d\'espera al intentar verificar esti paquete. Prueba a instalalu más tarde.</string>
   <!-- Message presented when an application could not be installed on the tablet for some reason. [CHAR LIMIT=100] -->
-  <string name="install_failed_msg" product="tablet">Nun pudo instalase <xliff:g id="APP_NAME">%1$s</xliff:g> na tablet.</string>
   <!-- Message presented when an application could not be installed on the TV for some reason. [CHAR LIMIT=100] -->
   <!-- Message presented when an application could not be installed on the phone for some reason. [CHAR LIMIT=100] -->
-  <string name="install_failed_msg" product="default">Nun pudo instalase <xliff:g id="APP_NAME">%1$s</xliff:g> nel teléfonu.</string>
-  <string name="launch">Abrir</string>
-  <string name="unknown_apps_dlg_title">Instalación bloquiada</string>
-  <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
-  <string name="unknown_apps_dlg_text" product="tablet">Por seguridá, la tablet configuróse pa bloquiar aplicaciones de fontes desconocíes.</string>
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
-  <string name="unknown_apps_dlg_text" product="default">Por seguridá, el teléfonu configuróse pa bloquiar aplicaciones de fontes desconocíes.</string>
+  <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when the device administrator restricts the installation of apps from unknown sources. [CHAR LIMIT=none] -->
-  <string name="ok">Aceutar</string>
-  <string name="settings">Axustes</string>
   <!-- Title of dialog asking user if they would allow an application to be an install source. -->
-  <string name="allow_source_dlg_title">Fonte d\'aplicaciones nueva</string>
   <!-- Message of dialog asking user if they would allow an application to be an install source. -->
-  <string name="allow_source_dlg_text"><xliff:g id="APP_NAME">%1$s</xliff:g> quier instalar otres aplicaciones.\n\n¿Quies permitilo agora y nel futuru?</string>
-  <string name="manage_applications">Alministrar aplicaciones</string>
-  <string name="dlg_app_replacement_title">¿Sustituyir aplicación?</string>
-  <string name="dlg_app_replacement_statement">L\'aplicación que tas instalando va sustituyir otra aplicación.\n\nVan guardase tolos datos d\'usuariu anteriores.</string>
   <!-- Dialog attributes when replacing system app -->
-  <string name="dlg_sys_app_replacement_statement">Ye una aplicación del sistema.\n\nVan guardase tolos datos d\'usuariu anteriores.</string>
-  <string name="out_of_space_dlg_title">Ensin espaciu</string>
-  <string name="out_of_space_dlg_text">Nun pudo instalase l\'aplicación <xliff:g id="APP_NAME">%1$s</xliff:g>. Llibera espaciu y vuelvi a intentalo.</string>
   <!-- strings related to uninstall activity -->
-  <string name="dlg_ok">Aceutar</string>
-  <string name="app_not_found_dlg_title">Aplicación non atopada</string>
-  <string name="app_not_found_dlg_text">Nun s\'atopó l\'aplicación na llista d\'aplicaciones instalaes.</string>
-  <string name="uninstall_application_title">Desinstalar aplicación</string>
-  <string name="uninstall_update_title">Desinstalar anovamientu</string>
-  <string name="uninstall_activity_text"><xliff:g id="ACTIVITY_NAME">%1$s</xliff:g> forma parte d\'esta aplicación:</string>
-  <string name="uninstall_application_text">¿Quies desinstalar esta aplicación?</string>
-  <string name="uninstall_application_text_all_users">¿Quies desinstalar esta aplicación pa \"<b>tolos usuarios"</b> ? L\'aplicación y los sos datos van desaniciase de \"<b>tolos usuarios"</b> del preséu.</string>
-  <string name="uninstall_application_text_user">Quies desinstalar esta app pal usuariu <xliff:g id="username">%1$s</xliff:g>?</string>
-  <string name="uninstall_update_text">¿Quies sustituyir esta aplicación cola versión de fábrica?</string>
-  <string name="uninstalling">Desinstalando…</string>
-  <string name="uninstall_done">Desinstalación completada</string>
-  <string name="uninstall_failed">Desinstalación correuta</string>
   <!-- String presented to the user when uninstalling a package failed because the target package
         is a current device administrator [CHAR LIMIT=80] -->
-  <string name="uninstall_failed_device_policy_manager">Nun pue desinstalase porque esti paquete ye un alministrador de preseos activu.</string>
   <!-- String presented to the user when uninstalling a package failed because the target package
         is a current device administrator for some user [CHAR LIMIT=100] -->
   <!-- String presented to the user when uninstalling a package failed because a profile owner
          has marked the the target package as not able to be uninstalled [CHAR LIMIT=80] -->
   <!-- String presented to the user when uninstalling a package failed because a device owner
          has marked the the target package as not able to be uninstalled [CHAR LIMIT=80] -->
-  <string name="uninstall_blocked_device_owner">Esta app necesítala\'l to
-        alministrador del preséu, y nun pue desinstalase.</string>
   <!-- String on a button that leads to the "device administrator" configuration setting where a
         user will be able to disable the device administrator in order to uninstall
         it. [CHAR LIMIT=50] -->
-  <string name="manage_device_administrators">Xestionar alministradores de preseos</string>
-  <string name="uninstall_failed_msg">Nun pudo desinstalase <xliff:g id="APP_NAME">%1$s</xliff:g>.</string>
   <!-- Dialog attributes to indicate parse errors -->
-  <string name="Parse_error_dlg_title">Fallu d\'análisis</string>
-  <string name="Parse_error_dlg_text">Hebo un fallu al analizar el paquete.</string>
   <!-- Tab label for new permissions being added to an existing app [CHAR LIMIT=20] -->
-  <string name="newPerms">Nuevu</string>
   <!-- Tab label for all permissions of an app being installed [CHAR LIMIT=20] -->
-  <string name="allPerms">Toos</string>
   <!-- Tab label for permissions related to user privacy [CHAR LIMIT=20] -->
-  <string name="privacyPerms">Privacidá</string>
   <!-- Tab label for permissions related to device behavior [CHAR LIMIT=20] -->
-  <string name="devicePerms">Accesu preséu</string>
   <!-- Body text for new tab when there are no new permissions [CHAR LIMIT=NONE] -->
-  <string name="no_new_perms">Esti anovamientu nun necesita permisos nuevos.</string>
-  <string name="grant_confirm_question">¿Quies conceder los siguientes permisos? Va poder accedese a:</string>
   <!-- Title for the dialog button to allow a permission grant. -->
   <!-- Title for the dialog button to deny a permission grant. -->
   <!-- Template for the current permission from the total number of permissions. -->
