@@ -118,4 +118,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"ກວດ​ພົບ​ການ​ວາງ​ຊ້ອນ​ໜ້າ​ຈໍ​ແລ້ວ"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"ເພື່ອ​ປ່ຽນ​ແປງ​ການ​ຕັ້ງ​ຄ່າ​ການ​ອະ​ນຸ​ຍາດ​ນີ້, ກ່ອນ​ອື່ນ​ໝົດ​ທ່ານ​ຕ້ອງ​ປິດ​ການ​ວາງ​ຊ້ອນ​ໜ້າ​ຈໍ​ຈາກ​ແອັບ​ການ​ຕັ້ງ​ຄ່າ"</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"ເປີດການຕັ້ງຄ່າ"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"ຕິດ​ຕັ້ງ/ຖອນ​ຕິດ​ຕັ້ງ​ການ​ກະ​ທຳ​ທີ່​ບໍ່​ຮອງ​ຮັບ​ຢູ່​ໃນ Wear."</string>
 </resources>

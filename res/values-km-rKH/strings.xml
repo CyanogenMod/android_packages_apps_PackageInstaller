@@ -118,4 +118,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"បានរកឃើញអេក្រង់ត្រួតគ្នា"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"ដើម្បីប្តូរការកំណត់សិទ្ធិអនុញ្ញាតនេះ ជាដំបូងអ្នកត្រូវបិទអេក្រង់ត្រួតគ្នានៅក្នុង ការកំណត់ &gt; កម្មវិធី"</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"បើកការកំណត់"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"សកម្មភាពដំឡើង/លុបការដំឡើងមិនគាំទ្រនៅលើ Wear ទេ"</string>
 </resources>

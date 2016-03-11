@@ -118,4 +118,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"ਸਕਰੀਨ ਓਵਰਲੇਅ ਲੱਭ ਗਿਆ"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"ਇਸ ਇਜ਼ਾਜਤ ਸੈਟਿੰਗ ਨੂੰ ਬਦਲਣ ਲਈ; ਤੁਹਾਨੂੰ ਪਹਿਲਾਂ ਸੈਟਿੰਗਜ਼ ਅਤੇ ਐਪਸ ਤੋਂ ਸਕ੍ਰੀਨ ਓਵਰਲੇਅ ਬੰਦ ਕਰਨਾ ਪਵੇਗਾ"</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"ਸੈਟਿੰਗਜ਼ ਖੋਲ੍ਹੋ"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android ਵੀਅਰ"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"ਵੀਅਰ \'ਤੇ ਸਥਾਪਿਤ ਕਰੋ/ਸਥਾਪਨਾ ਰੱਦ ਕਰੋ ਕਾਰਵਾਈਆਂ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।"</string>
 </resources>

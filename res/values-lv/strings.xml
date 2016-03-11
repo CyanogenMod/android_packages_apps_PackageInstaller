@@ -119,4 +119,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"Konstatēts ekrāna pārklājums"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"Lai mainītu šo atļaujas iestatījumu, vispirms sadaļā “Iestatījumi un lietotnes” izslēdziet ekrāna pārklājumu."</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"Atvērt iestatījumus"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"Wear ierīcē netiek atbalstīta instalēšana/atinstalēšana."</string>
 </resources>

@@ -118,4 +118,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"已偵測到螢幕重疊功能"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"如要變更此權限設定，請先前往 [設定] &gt; [應用程式]，以關閉螢幕重疊功能"</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"開啟設定"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"Wear 不支援安裝/解除安裝操作。"</string>
 </resources>

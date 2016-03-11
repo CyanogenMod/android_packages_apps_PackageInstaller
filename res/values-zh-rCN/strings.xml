@@ -92,7 +92,7 @@
     <string name="current_permission_template" msgid="6378304249516652817">"第 <xliff:g id="CURRENT_PERMISSION_INDEX">%1$s</xliff:g> 项权限（共 <xliff:g id="PERMISSION_COUNT">%2$s</xliff:g> 项）"</string>
     <string name="permission_warning_template" msgid="5209102765005869454">"要允许<xliff:g id="APP_NAME">%1$s</xliff:g><xliff:g id="ACTION">%2$s</xliff:g>吗？"</string>
     <string name="app_permissions_breadcrumb" msgid="3390836200791539264">"应用"</string>
-    <string name="app_permissions" msgid="3146758905824597178">"应用所需权限"</string>
+    <string name="app_permissions" msgid="3146758905824597178">"应用访问授权"</string>
     <string name="never_ask_again" msgid="3798895821072102967">"不再询问"</string>
     <string name="no_permissions" msgid="3210542466245591574">"没有权限"</string>
     <string name="additional_permissions" msgid="6667573114240111763">"其他权限"</string>
@@ -118,4 +118,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"检测到屏幕叠加层"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"要更改此权限设置，您必须首先在“设置”&gt;“应用”中关闭屏幕叠加层"</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"打开设置"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"Wear 不支持安装/卸载操作。"</string>
 </resources>

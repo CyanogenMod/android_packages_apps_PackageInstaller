@@ -16,7 +16,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name" msgid="2738748390251381682">"Программа установки пакета"</string>
+    <string name="app_name" msgid="2738748390251381682">"Установщик пакетов"</string>
     <string name="next" msgid="3057143178373252333">"Далее"</string>
     <string name="install" msgid="5896438203900042068">"Установить"</string>
     <string name="done" msgid="3889387558374211719">"Готово"</string>
@@ -120,4 +120,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"Обнаружены наложения"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"Чтобы предоставить или отменить разрешение, сначала отключите наложения. Для этого нажмите \"Настройки &gt; Приложения\"."</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"Открыть настройки"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"Android Wear не поддерживает установку и удаление."</string>
 </resources>

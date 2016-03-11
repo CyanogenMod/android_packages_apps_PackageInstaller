@@ -110,7 +110,7 @@
     <string name="no_apps" msgid="1965493419005012569">"Nicio aplicație"</string>
     <string name="location_settings" msgid="1774875730854491297">"Setări privind locația"</string>
     <string name="location_warning" msgid="8778701356292735971">"<xliff:g id="APP_NAME">%1$s</xliff:g> este un furnizor de servicii de localizare pentru acest dispozitiv. Accesul la locație poate fi modificat din setările privind locația."</string>
-    <string name="system_warning" msgid="7103819124542305179">"Dacă refuzați această permisiune, este posibil ca funcțiile de bază ale dispozitivului să nu mai funcționează corespunzător."</string>
+    <string name="system_warning" msgid="7103819124542305179">"Dacă refuzați această permisiune, este posibil ca funcțiile de bază ale dispozitivului să nu mai funcționeze corespunzător."</string>
     <string name="permission_summary_enforced_by_policy" msgid="3418617316188986205">"Aplicată conform politicii"</string>
     <string name="loading" msgid="7811651799620593731">"Se încarcă..."</string>
     <string name="all_permissions" msgid="5156669007784613042">"Toate permisiunile"</string>
@@ -119,4 +119,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"S-a detectat suprapunerea pe ecran"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"Ca să schimbați această setare pentru permisiuni, mai întâi trebuie să dezactivați suprapunerea pe ecran din Setări &gt; Aplicații"</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"Deschideți setările"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"Acțiunile Instalați/Dezinstalați nu sunt acceptate pe Wear."</string>
 </resources>

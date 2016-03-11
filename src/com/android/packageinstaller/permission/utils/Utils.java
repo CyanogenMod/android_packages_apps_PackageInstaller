@@ -31,7 +31,10 @@ import android.util.Log;
 import android.util.TypedValue;
 
 import com.android.packageinstaller.permission.model.AppPermissionGroup;
+import com.android.packageinstaller.permission.model.AppPermissions;
 import com.android.packageinstaller.permission.model.PermissionApps.PermissionApp;
+
+import java.util.List;
 
 public class Utils {
 
@@ -127,14 +130,20 @@ public class Utils {
         return launcherPkgs;
     }
 
-    public static boolean isSystem(PermissionApp app, ArraySet<String> launcherPkgs) {
-        ApplicationInfo info = app.getAppInfo();
-        return info.isSystemApp() && (info.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) == 0
-                && !launcherPkgs.contains(info.packageName);
+    public static List<ApplicationInfo> getAllInstalledApplications(Context context) {
+        return context.getPackageManager().getInstalledApplications(0);
     }
 
-    public static boolean isTelevision(Context context) {
-        int uiMode = context.getResources().getConfiguration().uiMode;
-        return (uiMode & Configuration.UI_MODE_TYPE_MASK) == Configuration.UI_MODE_TYPE_TELEVISION;
+    public static boolean isSystem(PermissionApp app, ArraySet<String> launcherPkgs) {
+        return isSystem(app.getAppInfo(), launcherPkgs);
+    }
+
+    public static boolean isSystem(AppPermissions app, ArraySet<String> launcherPkgs) {
+        return isSystem(app.getPackageInfo().applicationInfo, launcherPkgs);
+    }
+
+    public static boolean isSystem(ApplicationInfo info, ArraySet<String> launcherPkgs) {
+        return info.isSystemApp() && (info.flags & ApplicationInfo.FLAG_UPDATED_SYSTEM_APP) == 0
+                && !launcherPkgs.contains(info.packageName);
     }
 }

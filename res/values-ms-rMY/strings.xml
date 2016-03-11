@@ -118,4 +118,6 @@
     <string name="screen_overlay_title" msgid="3021729846864038529">"Tindanan skrin dikesan"</string>
     <string name="screen_overlay_message" msgid="2141944461571677331">"Untuk menukar tetapan kebenaran ini, anda perlu mematikan tindanan skrin daripada Tetapan &gt; Apl terlebih dahulu"</string>
     <string name="screen_overlay_button" msgid="4344544843349937743">"Buka tetapan"</string>
+    <string name="wear_not_allowed_dlg_title" msgid="8104666773577525713">"Android Wear"</string>
+    <string name="wear_not_allowed_dlg_text" msgid="1618381127237173068">"Tindakan Pasang/Nyahpasang tidak disokong pada Wear."</string>
 </resources>
