@@ -106,4 +106,6 @@
         go to Settings and click on apps, this may need updates in RTL languages. [CHAR LIMIT=NONE] -->
   <!-- Button for the dialog that warns the user they need to turn off screen overlays
          before permissions can be changed. [CHAR LIMIT=NONE] -->
+  <!-- Title of dialog telling users that Install/Uninstall action is not supported on Android Wear. -->
+  <!-- Title of dialog telling users that Install/Uninstall action is not supported on Android Wear. -->
 </resources>
