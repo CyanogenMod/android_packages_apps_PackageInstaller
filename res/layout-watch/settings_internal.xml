@@ -24,7 +24,7 @@
         android:textSize="@dimen/setting_short_header_text_size"
         android:maxLines="2"
         android:ellipsize="end"
-        android:textColor="#9E9E9E"
+        android:textColor="@color/setting_short_header_text_color"
         android:fontFamily="sans-serif-condensed-light"
         />
 
