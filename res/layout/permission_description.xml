@@ -25,7 +25,7 @@
         android:layout_width="36dip"
         android:layout_height="36dip"
         android:layout_marginTop="3dp"
-        android:tint="?android:attr/colorAccent"
+        android:tint="@color/permission_icon_tint_color"
         android:scaleType="fitCenter" >
     </ImageView>
 
