@@ -64,7 +64,7 @@
             android:layout_below="@android:id/title"
             android:layout_alignStart="@android:id/title"
             android:textAppearance="?android:attr/textAppearanceListItemSecondary"
-            android:textColor="?android:attr/textColorSecondary"
+            android:textColor="@color/preference_permissions_switch_title_text_color"
             android:maxLines="10" />
 
     </RelativeLayout>

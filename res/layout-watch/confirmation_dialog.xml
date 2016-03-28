@@ -73,7 +73,7 @@
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_gravity="bottom"
-                 android:background="#FF606060">
+                 android:background="@color/button_bar_container_background">
         <FrameLayout
             android:id="@+id/horizontal_button_bar"
             android:layout_width="match_parent"

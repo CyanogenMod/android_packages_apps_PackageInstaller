@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2016 The CyanogenMod Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<resources>
+    <color name="app_details_app_name_text_color">?android:attr/textColorPrimary</color>
+    <color name="grant_permissions_current_page_text_color">?android:attr/textColorSecondary</color>
+    <color name="grant_permissions_header_subsettings_background">?android:attr/colorPrimary</color>
+    <color name="grant_permissions_header_subsettings_text_color">?android:attr/textColorPrimaryInverse</color>
+    <color name="preference_category_text_color">?android:attr/colorAccent</color>
+    <color name="preference_summary_title_text_color">?android:attr/textColorSecondary</color>
+    <color name="preference_permissions_switch_title_text_color">?android:attr/textColorSecondary</color>
+    <color name="activity_text_color">?android:attr/textColorSecondary</color>
+    <color name="uninstall_confirm_text_color">?android:attr/textColorSecondary</color>
+    <color name="button_bar_container_background">#FF606060</color>
+    <color name="setting_short_header_text_color">#9E9E9E</color>
+    <color name="permissions_settings_circle_border_color">#FFFFFFFF</color>
+    <color name="permissions_settings_circle_color">#00000000</color>
+    <color name="permissions_settings_image_tint_color">#FFFFFFFF</color>
+    <color name="permission_icon_tint_color">?android:attr/colorAccent</color>
+</resources>

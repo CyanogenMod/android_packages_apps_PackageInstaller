@@ -10,10 +10,10 @@
         android:layout_height="52dp"
         android:layout_width="52dp"
         android:layout_gravity="center_vertical"
-        app:circle_border_color="#FFFFFFFF"
+        app:circle_border_color="@color/permissions_settings_circle_border_color"
         app:circle_border_width="1dp"
-        app:circle_color="#00000000"
-        app:image_tint="#FFFFFFFF"/>
+        app:circle_color="@color/permissions_settings_circle_color"
+        app:image_tint="@color/permissions_settings_image_tint_color"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
