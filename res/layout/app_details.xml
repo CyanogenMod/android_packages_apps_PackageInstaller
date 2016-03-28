@@ -41,7 +41,7 @@ installation screens
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="?android:attr/textColorPrimary"
+        android:textColor="@color/app_details_app_name_text_color"
         android:layout_toEndOf="@id/app_icon"
         android:singleLine="true"
         android:layout_centerInParent="true"

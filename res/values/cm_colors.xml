@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_details_app_name_text_color">?android:attr/textColorPrimary</color>
+    <color name="grant_permissions_current_page_text_color">?android:attr/textColorSecondary</color>
+    <color name="grant_permissions_header_subsettings_background">?android:attr/colorPrimary</color>
+    <color name="grant_permissions_header_subsettings_tex_color">?android:attr/textColorPrimaryInverse</color>
+    <color name="preference_category_text_color">?android:attr/colorAccent</color>
+    <color name="preference_summary_title_text_color">?android:attr/textColorSecondary</color>
+    <color name="preference_permissions_switch_title_text_color">?android:attr/textColorSecondary</color>
+    <color name="activity_text_color">?android:attr/textColorSecondary</color>
+    <color name="uninstall_confirm_text_color">?android:attr/textColorSecondary</color>
+    <color name="button_bar_container_background">#FF606060</color>
+    <color name="setting_short_header_text_color">#9E9E9E</color>
+    <color name="permissions_settings_circle_border_color">#FFFFFFFF</color>
+    <color name="permissions_settings_circle_color">#00000000</color>
+    <color name="permissions_settings_image_tint_color">#FFFFFFFF</color>
+    <color name="permission_icon_tint_color">?android:attr/colorAccent</color>
+    <color name="XXXXXXXXXXXXX">#XXXXXXXXXXXX</color>
+    <color name="XXXXXXXXXXXXX">#XXXXXXXXXXXX</color>
+    <color name="XXXXXXXXXXXXX">#XXXXXXXXXXXX</color>
+    <color name="XXXXXXXXXXXXX">#XXXXXXXXXXXX</color>
+    <color name="XXXXXXXXXXXXX">#XXXXXXXXXXXX</color>
+    <color name="XXXXXXXXXXXXX">#XXXXXXXXXXXX</color>
+    <color name="XXXXXXXXXXXXX">#XXXXXXXXXXXX</color>
+</resources>
