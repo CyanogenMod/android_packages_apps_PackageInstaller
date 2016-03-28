@@ -65,7 +65,7 @@
                 android:paddingEnd="12dp"
                 android:singleLine="true"
                 style="?android:attr/textAppearanceSmall"
-                android:textColor="?android:attr/textColorSecondary"
+                android:textColor="@color/grant_permissions_current_page_text_color"
                 android:visibility="invisible">
             </TextView>
 
