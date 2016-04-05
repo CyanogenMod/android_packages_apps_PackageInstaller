@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">بوغچا ئورناتقۇچ</string>
-  <string name="next">كېيىنكى</string>
   <!-- TODO REMOVE LATER -->
   <!-- Message for installing a new app that requires some permissions [CHAR LIMIT=NONE] -->
   <!-- Message for installing a new app that does not require permissions [CHAR LIMIT=NONE] -->
