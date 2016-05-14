@@ -15,97 +15,44 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">بوغچا ئورناتقۇچ</string>
-  <string name="next">كېيىنكى</string>
-  <string name="install">ئورنات</string>
-  <string name="done">تامام</string>
   <!-- TODO REMOVE LATER -->
-  <string name="security_settings_desc">بۇ ئەپكە يول قويىدىغىنى:</string>
-  <string name="cancel">ۋاز كەچ</string>
-  <string name="unknown">يوچۇن</string>
-  <string name="installing">ئورنىتىۋاتىدۇ…</string>
-  <string name="install_done">ئەپ ئورنىتىلدى.</string>
   <!-- Message for installing a new app that requires some permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question">بۇ ئەپنى ئورنىتامسىز؟ ئۇ تۆۋەندىكى ھوقۇققا ئېرىشىدۇ:</string>
   <!-- Message for installing a new app that does not require permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_no_perms">بۇ ئەپنى ئورنىتامسىز؟ ئۇ ھېچقانداق ئالاھىدە ھوقۇققا ئېھتىياجلىق ئەمەس.</string>
   <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update">بۇ ئەپنىڭ يېڭىلىنىشىنى ئورنىتامسىز؟ مەۋجۇت سانلىق مەلۇماتلىرىڭىز يوقالمايدۇ. يېڭىلانغان ئەپ تۆۋەندىكى ھوقۇققا ئېرىشىدۇ:</string>
   <!-- Message for updating an existing system app [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update_system">بۇ ئەپنىڭ ئىچكى يېڭىلىنىشىنى ئورنىتامسىز؟ مەۋجۇت سانلىق مەلۇماتلىرىڭىز يوقالمايدۇ. يېڭىلانغان ئەپ تۆۋەندىكى ھوقۇققا ئېرىشىدۇ:</string>
   <!-- Message for updating an existing app, no permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update_no_perms">بۇ ئەپنىڭ يېڭىلىنىشىنى ئورنىتامسىز؟ مەۋجۇت سانلىق مەلۇماتلىرىڭىز يوقالمايدۇ. ئۇنىڭ ئۈچۈن ھېچقانداق ئالاھىدە ھوقۇق زۆرۈر ئەمەس.</string>
   <!-- Message for updating an existing system app, no permissions [CHAR LIMIT=NONE] -->
-  <string name="install_confirm_question_update_system_no_perms">بۇ ئەپنىڭ ئىچكى يېڭىلىنىشىنى ئورنىتامسىز؟ مەۋجۇت سانلىق مەلۇماتلىرىڭىز يوقالمايدۇ. ئۇنىڭ ئۈچۈن ھېچقانداق ئالاھىدە ھوقۇق زۆرۈر ئەمەس.</string>
-  <string name="install_failed">ئەپ ئورنىتىلمىغان.</string>
   <!-- Reason displayed when installation fails because the installation package itself is invalid
         in some way (e.g., corrupt) [CHAR LIMIT=100] -->
-  <string name="install_failed_invalid_apk">بوغچا بۇزۇلغاندەك تۇرىدۇ.</string>
   <!-- Reason displayed when installation fails because the package an existing package is
         installed with a conflicting package author signature [CHAR LIMIT=100] -->
-  <string name="install_failed_inconsistent_certificates">بوغچا مەۋجۇت، ئىمزا توقۇنۇشى بار ئوخشاش ئاتلىق بوغچا ئورنىتىلغان.</string>
   <!-- Reason displayed when installation fails because the package specifies a minimum compatible
         OS version that is newer than our current OS version. [CHAR LIMIT=100] -->
-  <string name="install_failed_older_sdk">بۇ بوغچا يېڭى نەشردىكى Android تىلا ئىشلەيدۇ.</string>
   <!-- Reason displayed when installation fails because the package specifies it is compatible
         only with a CPU that the current tablet doesn't have. [CHAR LIMIT=100] -->
-  <string name="install_failed_cpu_abi_incompatible" product="tablet">بۇ ئەپ تاختا كومپيۇتېرىڭىز بىلەن ماسلاشمايدۇ.</string>
   <!-- Reason displayed when installation fails because the package specifies it is compatible
         only with a CPU that the current TV doesn't have. [CHAR LIMIT=100] -->
   <!-- Reason displayed when installation fails because the package specifies it is compatible
         only with a CPU that the current phone doesn't have. [CHAR LIMIT=100] -->
-  <string name="install_failed_cpu_abi_incompatible" product="default">بۇ ئەپ تېلېفونىڭىز بىلەن ماسلاشمايدۇ.</string>
   <!-- Reason displayed when installation fails because the package was deleted during the
         installation process. [CHAR LIMIT=100] -->
-  <string name="install_failed_file_not_found">بەلگىلەنگەن بوغچا ئۆچۈرۈلگەن، ئورنىتىشنى تاماملىيالمايدۇ.</string>
   <!-- Reason displayed when installation fails because the package could not be verified
         because the package verifier rejected it. [CHAR LIMIT=100] -->
-  <string name="install_failed_verify_failed">بەلگىلەنگەن بوغچا دەلىللەشتىن ئۆتەلمىدى، ئورناتقىلى بولمايدۇ.</string>
   <!-- Reason displayed when installation fails because the package could not be verified
         before the internal system timer expired. [CHAR LIMIT=100] -->
-  <string name="install_failed_verify_timeout">بۇ بوغچىنى دەلىللەۋاتقاندا ۋاقىت ھالقىدى. سەل تۇرۇپ ئۇنى قايتا ئورنىتىشنى سىناڭ.</string>
   <!-- Message presented when an application could not be installed on the tablet for some reason. [CHAR LIMIT=100] -->
-  <string name="install_failed_msg" product="tablet">بۇ تاختا كومپيۇتېرىڭىزغا <xliff:g id="APP_NAME">%1$s</xliff:g> نى ئورناتقىلى بولمايدۇ.</string>
   <!-- Message presented when an application could not be installed on the TV for some reason. [CHAR LIMIT=100] -->
   <!-- Message presented when an application could not be installed on the phone for some reason. [CHAR LIMIT=100] -->
-  <string name="install_failed_msg" product="default">بۇ تېلېفونىڭىزغا <xliff:g id="APP_NAME">%1$s</xliff:g> نى ئورناتقىلى بولمايدۇ.</string>
-  <string name="launch">ئاچ</string>
-  <string name="unknown_apps_dlg_title">ئورنىتىش توسۇلدى</string>
-  <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
-  <string name="unknown_apps_dlg_text" product="tablet">بىخەتەرلىكنى كۆزدە تۇتۇپ، تاختا كومپيۇتېرىڭىز يوچۇن مەنبەدىن كەلگەن ئەپلەرنى ئورنىتىش چەكلەندى قىلىپ تەڭشەلدى.</string>
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
-  <string name="unknown_apps_dlg_text" product="default">بىخەتەرلىكنى كۆزدە تۇتۇپ، تېلېفونىڭىز يوچۇن مەنبەدىن كەلگەن ئەپلەرنى ئورنىتىش چەكلەندى قىلىپ تەڭشەلدى.</string>
+  <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when the device administrator restricts the installation of apps from unknown sources. [CHAR LIMIT=none] -->
-  <string name="ok">جەزملە</string>
-  <string name="settings">تەڭشەكلەر</string>
   <!-- Title of dialog asking user if they would allow an application to be an install source. -->
-  <string name="allow_source_dlg_title">يېڭى ئەپ مەنبەسى</string>
   <!-- Message of dialog asking user if they would allow an application to be an install source. -->
-  <string name="allow_source_dlg_text"><xliff:g id="APP_NAME">%1$s</xliff:g> باشقا ئەپ ئوناتماقچى\"n\n\"ھازىردىن باشلاپ بۇ مەشغۇلاتقا يول قويامدۇ؟</string>
-  <string name="manage_applications">ئەپ باشقۇرۇش</string>
-  <string name="dlg_app_replacement_title">ئەپنى ئالماشتۇرامدۇ؟</string>
-  <string name="dlg_app_replacement_statement">سىز ئورنىتىۋاتقان ئەپ باشقا ئەپنى ئالماشتۇرىۋېتىدۇ.\"\n\n\"ئىلگىرىكى ئىشلەتكۈچى سانلىق مەلۇماتلىرىڭىزنىڭ ھەممىسى ساقلىنىدۇ.</string>
   <!-- Dialog attributes when replacing system app -->
-  <string name="dlg_sys_app_replacement_statement">بۇ سىستېما ئەپ.\"\n\n\"ئىلگىرىكى ئىشلەتكۈچى سانلىق مەلۇماتلىرىڭىزنىڭ ھەممىسى ساقلىنىدۇ.</string>
-  <string name="out_of_space_dlg_title">ساقلاش بوشلۇقىدىن ھالقىپ كەتتى</string>
-  <string name="out_of_space_dlg_text"><xliff:g id="APP_NAME">%1$s</xliff:g> نى ئورنىتالمىدى. ئازراق بوشلۇق بىكارلاپ ئاندىن قايتا سىناڭ.</string>
   <!-- strings related to uninstall activity -->
-  <string name="dlg_ok">جەزملە</string>
-  <string name="app_not_found_dlg_title">ئەپ تېپىلمىدى</string>
-  <string name="app_not_found_dlg_text">ئورنىتىلغان ئەپلەر تىزىملىكىدىن بۇ ئەپنى تاپالمىدى.</string>
-  <string name="uninstall_application_title">ئەپنى ئۆچۈر</string>
-  <string name="uninstall_update_title">يېڭىلاش ئۆچۈرەمدۇ</string>
-  <string name="uninstall_activity_text"><xliff:g id="ACTIVITY_NAME">%1$s</xliff:g> تۆۋەندىكى ئەپنىڭ پارچىسى:</string>
-  <string name="uninstall_application_text">بۇ ئەپنى ئۆچۈرۈۋېتەمسىز؟</string>
-  <string name="uninstall_application_text_all_users">\"<b>"ھەممە"</b>\" ئىشلەتكۈچى ئۈچۈن بۇ ئەپنى ئۆچۈرەمسىز؟ ئۈسكۈنىدىكى \"<b>"ھەممە"</b>\" ئىشلەتكۈچىنىڭ بۇ ئەپى ۋە سانلىق مەلۇماتلىرى ئۆچۈرۈلىدۇ.</string>
-  <string name="uninstall_update_text">بۇ ئەپنى زاۋۇت نەشرىگە ئالماشتۇرامسىز؟</string>
-  <string name="uninstalling">ئۆچۈرۈۋاتىدۇ…</string>
-  <string name="uninstall_done">ئۆچۈرۈش تاماملاندى</string>
-  <string name="uninstall_failed">ئۆچۈرەلمىدى.</string>
   <!-- String presented to the user when uninstalling a package failed because the target package
         is a current device administrator [CHAR LIMIT=80] -->
-  <string name="uninstall_failed_device_policy_manager">ئۆچۈرەلمىدى چۈنكى بۇ بوغچا نۆۋەتتە ئىشلىتىۋاتقان ئاكتىپ ئۈسكۈنە باشقۇرغۇچ.</string>
   <!-- String presented to the user when uninstalling a package failed because the target package
         is a current device administrator for some user [CHAR LIMIT=100] -->
   <!-- String presented to the user when uninstalling a package failed because a profile owner
@@ -115,22 +62,12 @@
   <!-- String on a button that leads to the "device administrator" configuration setting where a
         user will be able to disable the device administrator in order to uninstall
         it. [CHAR LIMIT=50] -->
-  <string name="manage_device_administrators">ئۈسكۈنە باشقۇرغۇچنى باشقۇرۇش</string>
-  <string name="uninstall_failed_msg">\" نى ئۆچۈرەلمەيدۇ\"<xliff:g id="APP_NAME">%1$s</xliff:g></string>
   <!-- Dialog attributes to indicate parse errors -->
-  <string name="Parse_error_dlg_title">يېشىش خاتالىقى</string>
-  <string name="Parse_error_dlg_text">بوغچىنى يېشىشتە مەسىلە كۆرۈلدى.</string>
   <!-- Tab label for new permissions being added to an existing app [CHAR LIMIT=20] -->
-  <string name="newPerms">يېڭى</string>
   <!-- Tab label for all permissions of an app being installed [CHAR LIMIT=20] -->
-  <string name="allPerms">ھەممىسى</string>
   <!-- Tab label for permissions related to user privacy [CHAR LIMIT=20] -->
-  <string name="privacyPerms">شەخسىيەت</string>
   <!-- Tab label for permissions related to device behavior [CHAR LIMIT=20] -->
-  <string name="devicePerms">ئۈسكۈنە ھوقۇقى</string>
   <!-- Body text for new tab when there are no new permissions [CHAR LIMIT=NONE] -->
-  <string name="no_new_perms">بۇ يېڭىلاش يېڭى ھوقۇققا ئېھتىياجلىق ئەمەس.</string>
-  <string name="grant_confirm_question">بۇ ئەپكە تۆۋەندىكى ھوقۇقنى بېرەمسىز؟ ئۇ ئېرىشىدىغان ھوقۇق:</string>
   <!-- Title for the dialog button to allow a permission grant. -->
   <!-- Title for the dialog button to deny a permission grant. -->
   <!-- Template for the current permission from the total number of permissions. -->
