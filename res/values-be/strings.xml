@@ -15,7 +15,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Пакет усталёўкі</string>
+  <string name="next">Далей</string>
+  <string name="install">Усталяваць</string>
+  <string name="done">Выканана</string>
   <!-- TODO REMOVE LATER -->
+  <string name="cancel">Скасаваць</string>
   <!-- Message for installing a new app that requires some permissions [CHAR LIMIT=NONE] -->
   <!-- Message for installing a new app that does not require permissions [CHAR LIMIT=NONE] -->
   <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
@@ -47,6 +52,7 @@
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when the device administrator restricts the installation of apps from unknown sources. [CHAR LIMIT=none] -->
+  <string name="settings">Налады</string>
   <!-- Title of dialog asking user if they would allow an application to be an install source. -->
   <!-- Message of dialog asking user if they would allow an application to be an install source. -->
   <!-- Dialog attributes when replacing system app -->
