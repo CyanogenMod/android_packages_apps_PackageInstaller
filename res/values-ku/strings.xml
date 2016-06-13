@@ -19,59 +19,95 @@
   <string name="next">دواتر</string>
   <string name="install">دامەزراندن</string>
   <string name="done">کرا</string>
+  <!-- TODO REMOVE LATER -->
   <string name="security_settings_desc">ڕێگه‌دان به‌ به‌رنامه‌ بۆ:</string>
   <string name="cancel">هەڵوەشاندنەوە</string>
   <string name="unknown">نەزانراو</string>
   <string name="installing">دادەمەزرێت\u2026</string>
   <string name="install_done">بەرنامەکە دامەزرێنرا.</string>
+  <!-- Message for installing a new app that requires some permissions [CHAR LIMIT=NONE] -->
   <string name="install_confirm_question">ئەتەوێت ئەم بەرنامەیە دامەزرێنیت?</string>
+  <!-- Message for installing a new app that does not require permissions [CHAR LIMIT=NONE] -->
   <string name="install_confirm_question_no_perms">دەتەوێت ئەم بەرنامەیە دامەزرێنیت؟
             ئەو هیچێک لە داواکردنی چوونەناو تایبەت ناکات.</string>
+  <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
   <string name="install_confirm_question_update">ئه‌ته‌وێ نوێکردنه‌وه‌ی 
             دابه‌زێنی بۆ هه‌مان به‌رنامه‌؟ زانیارییه‌کانی به‌رنامه‌که‌ت
             ناسڕدرێنه‌وه‌. ته‌نیا به‌رنامه‌که‌ نوێده‌بێته‌وه بۆ ده‌سته‌ڵاتی:</string>
+  <!-- Message for updating an existing system app [CHAR LIMIT=NONE] -->
   <string name="install_confirm_question_update_system">ئه‌ته‌وێ نوێکردنه‌وه‌ی 
             دابه‌زێنی بۆ هه‌مان به‌رنامه‌؟ زانیارییه‌کانی به‌رنامه‌که‌ت
             ناسڕدرێنه‌وه‌. ته‌نیا به‌رنامه‌که‌ نوێده‌بێته‌وه بۆ ده‌سته‌ڵاتی:</string>
+  <!-- Message for updating an existing app, no permissions [CHAR LIMIT=NONE] -->
   <string name="install_confirm_question_update_no_perms">ئه‌ته‌وێ نوێکردنه‌وه‌ی 
             دابه‌زێنی بۆ هه‌مان به‌رنامه‌؟ زانیارییه‌کانی به‌رنامه‌که‌ت
             ناسڕدرێنه‌وه‌. پێویستی به‌ ده‌سته‌ڵات پێدان نییه‌.</string>
+  <!-- Message for updating an existing system app, no permissions [CHAR LIMIT=NONE] -->
   <string name="install_confirm_question_update_system_no_perms">ئه‌ته‌وێ نوێکردنه‌وه‌ی 
             دابه‌زێنی بۆ هه‌مان به‌رنامه‌؟ زانیارییه‌کانی به‌رنامه‌که‌ت
             ناسڕدرێنه‌وه‌. پێویستی به‌ ده‌سته‌ڵات پێدان نییه‌.</string>
   <string name="install_failed">بەرنامەکە داى نەمەزراند.</string>
+  <!-- Reason displayed when installation fails because the installation package itself is invalid
+        in some way (e.g., corrupt) [CHAR LIMIT=100] -->
   <string name="install_failed_invalid_apk">واده‌رده‌که‌وێت به‌رنامه‌که‌ تێكچووبێت.</string>
+  <!-- Reason displayed when installation fails because the package an existing package is
+        installed with a conflicting package author signature [CHAR LIMIT=100] -->
   <string name="install_failed_inconsistent_certificates">پاکێجێکی لەمەپێش هەبوو بە ناوی لەیەکچوو و
         واژوویەکی دژ بە یەک لەمەوپێش دامەزراوە.</string>
+  <!-- Reason displayed when installation fails because the package specifies a minimum compatible
+        OS version that is newer than our current OS version. [CHAR LIMIT=100] -->
   <string name="install_failed_older_sdk">ئەم پاکێجە تەنها بە وەشانە نوێیەکانی ئەندرۆید
         کار ئەکات.</string>
+  <!-- Reason displayed when installation fails because the package specifies it is compatible
+        only with a CPU that the current tablet doesn't have. [CHAR LIMIT=100] -->
   <string name="install_failed_cpu_abi_incompatible" product="tablet">ئەم بەرنامەیە
         لەگەڵ تابلێتەکەتدا گونجاو نییە.</string>
+  <!-- Reason displayed when installation fails because the package specifies it is compatible
+        only with a CPU that the current TV doesn't have. [CHAR LIMIT=100] -->
+  <!-- Reason displayed when installation fails because the package specifies it is compatible
+        only with a CPU that the current phone doesn't have. [CHAR LIMIT=100] -->
   <string name="install_failed_cpu_abi_incompatible" product="default">ئەم بەرنامەیە
         لەگەڵ تەلەفۆنەکەتدا گونجاو نییە.</string>
+  <!-- Reason displayed when installation fails because the package was deleted during the
+        installation process. [CHAR LIMIT=100] -->
   <string name="install_failed_file_not_found">ئەم پاکێجە دیاریکراوە سڕدرابوویەوە پێش ئەوەی کە
         دامەزراندنەکەی تەواو بێت.</string>
+  <!-- Reason displayed when installation fails because the package could not be verified
+        because the package verifier rejected it. [CHAR LIMIT=100] -->
   <string name="install_failed_verify_failed">پاکێجەکە بڕگەی ساغ کردنەوەی تێنەپەڕاند و ناتوانێت
         دابمەزرێت.</string>
+  <!-- Reason displayed when installation fails because the package could not be verified
+        before the internal system timer expired. [CHAR LIMIT=100] -->
   <string name="install_failed_verify_timeout">بەسەرچوونی کات ڕوویدا کاتێک هەوڵ درا بۆ ساغ کردنەوەی ئەم
         پاکێجە. دووبارە هەوڵ بدەوە بۆ دامەزراندنی دووباەری.</string>
+  <!-- Message presented when an application could not be installed on the tablet for some reason. [CHAR LIMIT=100] -->
   <string name="install_failed_msg" product="tablet"><xliff:g id="app_name">%1$s</xliff:g> ناتوانێت لە تابلێتەکەتدا دابمەزرێت.</string>
+  <!-- Message presented when an application could not be installed on the TV for some reason. [CHAR LIMIT=100] -->
+  <!-- Message presented when an application could not be installed on the phone for some reason. [CHAR LIMIT=100] -->
   <string name="install_failed_msg" product="default"><xliff:g id="app_name">%1$s</xliff:g> ناتوانێت لە تەلەفۆنەکەتدا دابمەزرێت.</string>
   <string name="launch">کردنه‌وه‌</string>
   <string name="unknown_apps_dlg_title">دامەزراندن ڕاگیراوە</string>
+  <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <string name="unknown_apps_dlg_text" product="tablet">بۆ ئاساییش، تابلێتەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
+  <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
+  <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <string name="unknown_apps_dlg_text" product="default">بۆ ئاساییش، تەلەفۆنەکەت دانراوە لە سەر  ڕێگەگرتن لە دامەزراندنی ئەو بەرنامانەی کە لە سەرچاوەی نەزانراوەوە دەست کەوتوون.</string>
+  <!-- Message presented in a dialog box when the device administrator restricts the installation of apps from unknown sources. [CHAR LIMIT=none] -->
   <string name="ok">باشه</string>
   <string name="settings">ڕێکخستنه‌کان</string>
+  <!-- Title of dialog asking user if they would allow an application to be an install source. -->
   <string name="allow_source_dlg_title">سەرچاوەی نوێ بۆ بەرنامەکان</string>
+  <!-- Message of dialog asking user if they would allow an application to be an install source. -->
   <string name="allow_source_dlg_text"><xliff:g id="app_name">%1$s</xliff:g> دەیەوێ بەرنامەکانی تر دامەزرێنێت.\n\nڕێگە ئەدەیت بە
         لە ئێستا و لە داهاتوودا؟</string>
   <string name="manage_applications">بەڕێوەبردنی بەرنامەکان</string>
   <string name="dlg_app_replacement_title">لەبریدانانی بەرنامەکە؟</string>
   <string name="dlg_app_replacement_statement">ئەم بەرنامە کە ئێستا دایدەمەزرێنی جێگری بەرنامەیەکی دیکە ئەبێت.\n\nهەموو دراوە بەکار هاتووەکانی پێشووترت پاشەکەوت دەکرێت.</string>
+  <!-- Dialog attributes when replacing system app -->
   <string name="dlg_sys_app_replacement_statement">ئەمە بەرنامەیەکی سیستەمییە.\n\nهەموو دراوە بەکار هاتووەکانی پێشووترت پاشەکەوت دەکرێت.</string>
   <string name="out_of_space_dlg_title">دەرچوون لە بۆشایی</string>
   <string name="out_of_space_dlg_text"><xliff:g id="app_name">%1$s</xliff:g> ناتوانێت دامەزرێنرێت. هەندێک بۆشایی بەتاڵ بکە و دووبارە هەوڵبدەوە.</string>
+  <!-- strings related to uninstall activity -->
   <string name="dlg_ok">باشه‌</string>
   <string name="app_not_found_dlg_title">بەرنامەکەی نەدۆزیەوە</string>
   <string name="app_not_found_dlg_text"> بەرنامەکە نەدۆزرایەوە لە لیستی بەرنامە دامەزراوەکان.</string>
@@ -85,16 +121,31 @@
   <string name="uninstalling">سڕینه‌وه‌\u2026</string>
   <string name="uninstall_done">سڕینه‌وه‌ تەواوبوو.</string>
   <string name="uninstall_failed">سڕینه‌وه‌ سەرنەکەوتووبوو.</string>
+  <!-- String presented to the user when uninstalling a package failed because the target package
+        is a current device administrator [CHAR LIMIT=80] -->
   <string name="uninstall_failed_device_policy_manager">هەڵناوەشێندرێتەوە چونکە ئەم پاکێجە لە سەر
         هەژماری چالاکی سەرپەرشتیاری ئامێرەکەتە.</string>
+  <!-- String presented to the user when uninstalling a package failed because a profile owner
+         has marked the the target package as not able to be uninstalled [CHAR LIMIT=80] -->
+  <!-- String presented to the user when uninstalling a package failed because a device owner
+         has marked the the target package as not able to be uninstalled [CHAR LIMIT=80] -->
+  <!-- String on a button that leads to the "device administrator" configuration setting where a
+        user will be able to disable the device administrator in order to uninstall
+        it. [CHAR LIMIT=50] -->
   <string name="manage_device_administrators">بەڕێوەبردنی سەرپەرشتیارەکانی ئامێر</string>
   <string name="uninstall_failed_msg"><xliff:g id="app_name">%1$s</xliff:g> نەتوانرا هەلوەشێندرێتەوە.</string>
+  <!-- Dialog attributes to indicate parse errors -->
   <string name="Parse_error_dlg_title">هەڵەی شی کردنەوە</string>
   <string name="Parse_error_dlg_text">هەڵەیەک هەبوو لا کاتی شی کردنەوەی ئەم پاکێجە.</string>
+  <!-- Tab label for new permissions being added to an existing app [CHAR LIMIT=20] -->
   <string name="newPerms">نوێ</string>
+  <!-- Tab label for all permissions of an app being installed [CHAR LIMIT=20] -->
   <string name="allPerms">هەموو</string>
+  <!-- Tab label for permissions related to user privacy [CHAR LIMIT=20] -->
   <string name="privacyPerms">نهێنێتی</string>
+  <!-- Tab label for permissions related to device behavior [CHAR LIMIT=20] -->
   <string name="devicePerms">چوونەناو ئامێر</string>
+  <!-- Body text for new tab when there are no new permissions [CHAR LIMIT=NONE] -->
   <string name="no_new_perms">ئەم نوێکارییە پێویستی بە هیچ ڕێگەپێدانێکی نوێ نییە.</string>
   <string name="grant_confirm_question">دەتەوێ ڕێگەپێدانەکانی بەردەم بە دەست بهێنی؟
         ئەمە دەستپێگەیشتن ئەکات بۆ:</string>
