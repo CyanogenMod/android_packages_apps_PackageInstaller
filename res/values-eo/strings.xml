@@ -15,7 +15,10 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="install">Instali</string>
   <!-- TODO REMOVE LATER -->
+  <string name="cancel">Nuligi</string>
+  <string name="unknown">Nekonata</string>
   <!-- Message for installing a new app that requires some permissions [CHAR LIMIT=NONE] -->
   <!-- Message for installing a new app that does not require permissions [CHAR LIMIT=NONE] -->
   <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
@@ -43,14 +46,17 @@
   <!-- Message presented when an application could not be installed on the tablet for some reason. [CHAR LIMIT=100] -->
   <!-- Message presented when an application could not be installed on the TV for some reason. [CHAR LIMIT=100] -->
   <!-- Message presented when an application could not be installed on the phone for some reason. [CHAR LIMIT=100] -->
+  <string name="launch">Malfermi</string>
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when the device administrator restricts the installation of apps from unknown sources. [CHAR LIMIT=none] -->
+  <string name="settings">Agordoj</string>
   <!-- Title of dialog asking user if they would allow an application to be an install source. -->
   <!-- Message of dialog asking user if they would allow an application to be an install source. -->
   <!-- Dialog attributes when replacing system app -->
   <!-- strings related to uninstall activity -->
+  <string name="uninstall_application_title">Malinstali aplikaĵon</string>
   <!-- String presented to the user when uninstalling a package failed because the target package
         is a current device administrator [CHAR LIMIT=80] -->
   <!-- String presented to the user when uninstalling a package failed because the target package
@@ -64,11 +70,14 @@
         it. [CHAR LIMIT=50] -->
   <!-- Dialog attributes to indicate parse errors -->
   <!-- Tab label for new permissions being added to an existing app [CHAR LIMIT=20] -->
+  <string name="newPerms">Nova</string>
   <!-- Tab label for all permissions of an app being installed [CHAR LIMIT=20] -->
   <!-- Tab label for permissions related to user privacy [CHAR LIMIT=20] -->
+  <string name="privacyPerms">Privateco</string>
   <!-- Tab label for permissions related to device behavior [CHAR LIMIT=20] -->
   <!-- Body text for new tab when there are no new permissions [CHAR LIMIT=NONE] -->
   <!-- Title for the dialog button to allow a permission grant. -->
+  <string name="grant_dialog_button_allow">Permesi</string>
   <!-- Title for the dialog button to deny a permission grant. -->
   <!-- Template for the current permission from the total number of permissions. -->
   <!-- Template for the warning message when an app requests a permission. -->
@@ -78,6 +87,7 @@
   <!-- Description of an application permission, listed so the user can choose whether
          they want to allow the application to do this. -->
   <!-- Breadcrumb for page of managing application permissions [CHAR LIMIT=50] -->
+  <string name="app_permissions_breadcrumb">Aplikaĵoj</string>
   <!-- Title for page of managing application permissions -->
   <!-- Checkbox that allows user to not be questioned about this permission
          request again -->
