@@ -15,7 +15,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Пакет усталёўкі</string>
+  <string name="next">Далей</string>
+  <string name="install">Усталяваць</string>
+  <string name="done">Выканана</string>
   <!-- TODO REMOVE LATER -->
+  <string name="cancel">Скасаваць</string>
   <!-- Message for installing a new app that requires some permissions [CHAR LIMIT=NONE] -->
   <!-- Message for installing a new app that does not require permissions [CHAR LIMIT=NONE] -->
   <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
@@ -24,10 +29,8 @@
   <!-- Message for updating an existing system app, no permissions [CHAR LIMIT=NONE] -->
   <!-- Reason displayed when installation fails because the package was blocked
         from being installed (e.g., device policy, verification, ...) [CHAR LIMIT=100] -->
-  <string name="install_failed_blocked">Instaliranje ovog paketa je blokirano.</string>
   <!-- Reason displayed when installation fails because the package conflicts with
         an existing application (e.g., incompatible certificates) [CHAR LIMIT=100] -->
-  <string name="install_failed_conflict">Paket je u koliziji sa postojećim paketom istog imena.</string>
   <!-- Reason displayed when installation fails because the package is incompatible with
        the current tablet (e.g., missing native code for the current ABI, newer SDK, ...) [CHAR LIMIT=100] -->
   <!-- Reason displayed when installation fails because the package is incompatible with
@@ -43,10 +46,9 @@
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when a package is requested to be installed, but the "Allow unknown applications" checkbox is not enabled. [CHAR LIMIT=100] -->
   <!-- Message presented in a dialog box when the device administrator restricts the installation of apps from unknown sources. [CHAR LIMIT=none] -->
+  <string name="settings">Налады</string>
   <!-- Dialog attributes when replacing system app -->
   <!-- strings related to uninstall activity -->
-  <string name="uninstall_update_text">Želite li ovu aplikaciju zamijeniti s fabričkom verzijom? Svi podaci će biti uklonjeni.</string>
-  <string name="uninstall_update_text_multiuser">Želite li ovu aplikaciju zamijeniti s fabričkom verzijom? Svi podaci će biti uklonjeni. To će utjecati na sve korisnike uređaja, uključujući i one s radnim profilima.</string>
   <!-- String presented to the user when uninstalling a package failed because the target package
         is a current device administrator [CHAR LIMIT=80] -->
   <!-- String presented to the user when uninstalling a package failed because the target package
@@ -54,10 +56,8 @@
   <!-- String presented to the admin user when uninstalling a package for all users failed
     because a profile owner has marked the target package as not able to be uninstalled
     [CHAR LIMIT=120] -->
-  <string name="uninstall_all_blocked_profile_owner">Ova aplikacija je neophodna nekim korisnicima ili profilima, a kod ostalih je deinstalirana</string>
   <!-- String presented to the user when uninstalling a package failed because a profile owner
          has marked the target package as not able to be uninstalled [CHAR LIMIT=120] -->
-  <string name="uninstall_blocked_profile_owner">Ova aplikacija je potrebna za vaš profil i ne može se deinstalirati.</string>
   <!-- String presented to the user when uninstalling a package failed because a device owner
          has marked the the target package as not able to be uninstalled [CHAR LIMIT=80] -->
   <!-- String on a button that leads to the "device administrator" configuration setting where a
@@ -66,7 +66,6 @@
   <!-- String on a button that leads to the "Users" page in Settings where a
         user will be able to remove the secondary user(s) in order to uninstall
         the app. [CHAR LIMIT=50] -->
-  <string name="manage_users">Upravljanje korisnicima</string>
   <!-- Dialog attributes to indicate parse errors -->
   <!-- Tab label for new permissions being added to an existing app [CHAR LIMIT=20] -->
   <!-- Tab label for all permissions of an app being installed [CHAR LIMIT=20] -->
@@ -75,10 +74,8 @@
   <!-- Body text for new tab when there are no new permissions [CHAR LIMIT=NONE] -->
   <!-- Title for the dialog button to deny a permission grant. -->
   <!-- Title for the dialog button to deny a permission grant despite a warning of implications. -->
-  <string name="grant_dialog_button_deny_anyway">Odbij svakako</string>
   <!-- Template for the current permission from the total number of permissions. -->
   <!-- Template for the warning message when an app requests a permission. -->
-  <string name="permission_warning_template">Želite li dozvoliti aplikaciji &lt;b&gt;<xliff:g id="APP_NAME">%1$s</xliff:g>&lt;/b&gt; da <xliff:g id="ACTION">%2$s</xliff:g>?</string>
   <!-- Permissions -->
   <!-- Title for the dialog button to allow a permission grant. -->
   <!-- Title of an application permission, listed so the user can choose whether they want
@@ -89,7 +86,6 @@
   <!-- Title for page of managing application permissions -->
   <!-- Checkbox that allows user to not be questioned about this permission
          request again -->
-  <string name="never_ask_again">Ne pitaj ponovo</string>
   <!-- Label when app requests no permissions -->
   <!-- Label for button that leads to more permissions [CHAR LIMIT=40] -->
   <!-- Description of how many more permissions to view on next page [CHAR LIMIT=30] -->
@@ -117,23 +113,16 @@
          before permissions can be changed. [CHAR LIMIT=NONE] -->
   <!-- Title of dialog telling users that Install/Uninstall action is not supported on Android Wear. -->
   <!-- Title of dialog telling users that Install/Uninstall action is not supported on Android Wear. -->
-  <string name="wear_not_allowed_dlg_text">Instaliranje/deinstaliranje nije podržano na Wearu.</string>
   <!-- Review of runtime permissions for legacy apps -->
   <!-- Template for the warning title when an updated app's requested permissions are reviewed. -->
-  <string name="permission_review_warning_title_template_update">Aplikacija <xliff:g id="APP_NAME_0">%1$s</xliff:g> je ažurirana. Želite li aplikaciji <xliff:g id="APP_NAME_1">%1$s</xliff:g> dopustiti pristup sljedećem?</string>
   <!-- Template for the screen title when app permissions are reviewed on install. -->
-  <string name="permission_review_title_template_install">Odaberite čemu aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g> može pristupati</string>
   <!-- Template for the screen title when app permissions are reviewed on update. -->
-  <string name="permission_review_title_template_update">Aplikacija <xliff:g id="APP_NAME">%1$s</xliff:g> je ažurirana. Odaberite čemu ova aplikacija može pristupati.</string>
   <!-- Title for the dialog button to cancel the detailed permission review. -->
+  <string name="review_button_cancel">Скасаваць</string>
   <!-- Title for the dialog button to continue accepting the detailed permission review. -->
-  <string name="review_button_continue">Nastavi</string>
   <!-- Title for the category listing the new permissions used by an app. -->
-  <string name="new_permissions_category">Nova odobrenja</string>
   <!-- Title for the category listing the current permissions used by an app. -->
-  <string name="current_permissions_category">Postojeća odobrenja</string>
   <!-- Message that the app to be installed is being staged -->
-  <string name="message_staging">Aplikacija se postavlja&#8230;</string>
   <!-- Placeholder for an app name when it is unknown -->
   <!-- Help URL, application permissions [DO NOT TRANSLATE] -->
 </resources>
