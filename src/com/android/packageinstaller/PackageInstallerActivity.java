@@ -120,6 +120,9 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
     private static final int DLG_NOT_SUPPORTED_ON_WEAR = DLG_BASE + 7;
 
     private void startInstallConfirm() {
+        ((TextView) findViewById(R.id.install_confirm_question))
+                .setText(R.string.install_confirm_question);
+        findViewById(R.id.spacer).setVisibility(View.GONE);
         TabHost tabHost = (TabHost)findViewById(android.R.id.tabhost);
         tabHost.setup();
         tabHost.setVisibility(View.VISIBLE);
@@ -324,7 +327,7 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
         // whether the untrusted sources setting is on. This allows partners to
         // implement a "allow untrusted source once" feature.
         if (request == REQUEST_ENABLE_UNKNOWN_SOURCES && result == RESULT_OK) {
-            initiateInstall();
+            checkIfAllowedAndInitiateInstall(true);
         } else {
             clearCachedApkIfNeededAndFinish();
         }
@@ -454,11 +457,26 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
         mOk.setOnClickListener(this);
         mCancel.setOnClickListener(this);
 
-        // Block the install attempt on the Unknown Sources setting if necessary.
-        final boolean requestFromUnknownSource = isInstallRequestFromUnknownSource(intent);
-        if (!requestFromUnknownSource) {
-            processPackageUri(packageUri);
+        boolean wasSetUp = processPackageUri(packageUri);
+        if (!wasSetUp) {
             return;
+        }
+
+        checkIfAllowedAndInitiateInstall(false);
+    }
+
+    /**
+     * Check if it is allowed to install the package and initiate install if allowed. If not allowed
+     * show the appropriate dialog.
+     *
+     * @param ignoreUnknownSourcesSettings Ignore {@link #isUnknownSourcesEnabled()} and proceed
+     *                                     even if this would prevented installation.
+     */
+    private void checkIfAllowedAndInitiateInstall(boolean ignoreUnknownSourcesSettings) {
+        // Block the install attempt on the Unknown Sources setting if necessary.
+        final boolean requestFromUnknownSource = isInstallRequestFromUnknownSource(getIntent());
+        if (!requestFromUnknownSource) {
+            initiateInstall();
         }
 
         // If the admin prohibits it, or we're running in a managed profile, just show error
@@ -467,7 +485,11 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
         if (isUnknownSourcesDisallowed()) {
             if ((mUserManager.getUserRestrictionSource(UserManager.DISALLOW_INSTALL_UNKNOWN_SOURCES,
                     Process.myUserHandle()) & UserManager.RESTRICTION_SOURCE_SYSTEM) != 0) {
-                showDialogInner(DLG_UNKNOWN_SOURCES);
+                if (ignoreUnknownSourcesSettings) {
+                    initiateInstall();
+                } else {
+                    showDialogInner(DLG_UNKNOWN_SOURCES);
+                }
             } else {
                 startActivity(new Intent(Settings.ACTION_SHOW_ADMIN_SUPPORT_DETAILS));
                 clearCachedApkIfNeededAndFinish();
@@ -475,11 +497,14 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
         } else if (!isUnknownSourcesEnabled() && isManagedProfile) {
             showDialogInner(DLG_ADMIN_RESTRICTS_UNKNOWN_SOURCES);
         } else if (!isUnknownSourcesEnabled()) {
-            // Ask user to enable setting first
-
-            showDialogInner(DLG_UNKNOWN_SOURCES);
+            if (ignoreUnknownSourcesSettings) {
+                initiateInstall();
+            } else {
+                // Ask user to enable setting first
+                showDialogInner(DLG_UNKNOWN_SOURCES);
+            }
         } else {
-            processPackageUri(packageUri);
+            initiateInstall();
         }
     }
 
@@ -492,7 +517,14 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
         super.onDestroy();
     }
 
-    private void processPackageUri(final Uri packageUri) {
+    /**
+     * Parse the Uri and set up the installer for this package.
+     *
+     * @param packageUri The URI to parse
+     *
+     * @return {@code true} iff the installer could be set up
+     */
+    private boolean processPackageUri(final Uri packageUri) {
         mPackageURI = packageUri;
 
         final String scheme = packageUri.getScheme();
@@ -511,7 +543,7 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
                             + " not available. Discontinuing installation");
                     showDialogInner(DLG_PACKAGE_ERROR);
                     setPmResult(PackageManager.INSTALL_FAILED_INVALID_APK);
-                    return;
+                    return false;
                 }
                 as = new PackageUtil.AppSnippet(mPm.getApplicationLabel(mPkgInfo.applicationInfo),
                         mPm.getApplicationIcon(mPkgInfo.applicationInfo));
@@ -526,7 +558,7 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
                     Log.w(TAG, "Parse error when parsing manifest. Discontinuing installation");
                     showDialogInner(DLG_PACKAGE_ERROR);
                     setPmResult(PackageManager.INSTALL_FAILED_INVALID_APK);
-                    return;
+                    return false;
                 }
                 mPkgInfo = PackageParser.generatePackageInfo(parsed, null,
                         PackageManager.GET_PERMISSIONS, 0, 0, null,
@@ -537,20 +569,20 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
             case SCHEME_CONTENT: {
                 mStagingAsynTask = new StagingAsyncTask();
                 mStagingAsynTask.execute(packageUri);
-                return;
+                return false;
             }
 
             default: {
                 Log.w(TAG, "Unsupported scheme " + scheme);
                 setPmResult(PackageManager.INSTALL_FAILED_INVALID_URI);
                 clearCachedApkIfNeededAndFinish();
-                return;
+                return false;
             }
         }
 
         PackageUtil.initSnippetForNewApp(this, as, R.id.app_snippet);
 
-        initiateInstall();
+        return true;
     }
 
     /** Get the ApplicationInfo for the calling package, if available */
@@ -776,7 +808,11 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
             }
             mContentUriApkStagingFile = file;
             Uri fileUri = Uri.fromFile(file);
-            processPackageUri(fileUri);
+
+            boolean wasSetUp = processPackageUri(fileUri);
+            if (wasSetUp) {
+                checkIfAllowedAndInitiateInstall(false);
+            }
         }
 
         @Override
